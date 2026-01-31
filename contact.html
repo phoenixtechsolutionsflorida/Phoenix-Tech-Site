@@ -3,23 +3,29 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Contact — Phoenix Company</title>
+  <title>Contact — Phoenix Technology Solutions</title>
   <link rel="stylesheet" href="./assets/css/styles.css" />
 </head>
 <body>
 
 <header class="header">
   <div class="container headerRow">
-    <a class="brand" href="./index.html"><div class="logoMark"></div><div>Phoenix Company</div></a>
-    <nav class="nav">
+    <a class="brand" href="./index.html">
+      <img class="brandLogo" src="./assets/img/logo.svg" alt="Phoenix Technology Solutions logo" />
+      <div>Phoenix Technology Solutions</div>
+    </a>
+
+    <nav class="nav" aria-label="Primary navigation">
       <a data-nav href="./index.html">Home</a>
       <a data-nav href="./services.html">Services</a>
+      <a data-nav href="./shop.html">Shop</a>
       <a data-nav href="./about.html">About</a>
       <a data-nav href="./contact.html">Contact</a>
     </nav>
+
     <div class="actions">
-      <a class="btn btnGhost" href="./services.html">Services</a>
-      <a class="btn btnPrimary" href="./contact.html">Contact</a>
+      <a class="btn btnGhost" href="./contact.html">Get Quote</a>
+      <a class="btn btnPrimary" href="./shop.html">Shop</a>
     </div>
   </div>
 </header>
@@ -28,8 +34,8 @@
   <div class="container">
     <div class="kicker"><span class="dot"></span><span>Let’s talk</span></div>
     <h1 style="margin-top:12px;">Contact</h1>
-    <p class="small" style="margin-top:10px; max-width:75ch;">
-      This form is currently a static demo for GitHub Pages. When you’re ready, we can connect it to email (Formspree),
+    <p class="small" style="margin-top:10px; max-width:80ch;">
+      This form is currently a static demo for GitHub Pages. When you’re ready, we can connect it to email,
       a backend API, or a CRM.
     </p>
 
@@ -53,13 +59,13 @@
 
       <div class="card" style="grid-column:8/span 5;">
         <div class="cardInner">
-          <div class="cardTitle"><h2>Business info</h2><span class="badge">Example</span></div>
+          <div class="cardTitle"><h2>Business info</h2><span class="badge">Florida</span></div>
           <hr class="sep" />
           <div class="small">
-            <strong>Email:</strong> email@company.com<br/>
+            <strong>Email:</strong> email@phoenixtechsolutions.com<br/>
             <strong>Phone:</strong> (555) 555-5555<br/>
             <strong>Hours:</strong> Mon–Fri 9am–5pm<br/>
-            <strong>Service Area:</strong> Your region here
+            <strong>Service Area:</strong> Florida
           </div>
 
           <div style="margin-top:14px;" class="li">
@@ -71,7 +77,7 @@
           </div>
 
           <div style="margin-top:14px;">
-            <a class="btn" href="./services.html">See services</a>
+            <a class="btn" href="./shop.html">Browse Shop</a>
           </div>
         </div>
       </div>
@@ -82,19 +88,22 @@
 <footer>
   <div class="container footerGrid">
     <div>
-      <div class="footerTitle">Phoenix Company</div>
-      <div class="small">Phoenix Theme 2 template — Contact page.</div>
+      <div class="footerTitle">Phoenix Technology Solutions</div>
+      <div class="small">Phoenix Theme 2 website template. Hosted on GitHub Pages now, custom domain later.</div>
     </div>
     <div class="footerLinks">
       <div class="footerTitle">Pages</div>
       <a href="./index.html">Home</a>
       <a href="./services.html">Services</a>
+      <a href="./shop.html">Shop</a>
       <a href="./about.html">About</a>
       <a href="./contact.html">Contact</a>
     </div>
     <div class="footerLinks">
-      <div class="footerTitle">Next</div>
-      <span class="small">Hook the form to email/API</span>
+      <div class="footerTitle">Contact</div>
+      <a href="./contact.html">Request a quote</a>
+      <span class="small">email@phoenixtechsolutions.com</span><br/>
+      <span class="small">(555) 555-5555</span>
     </div>
   </div>
 </footer>

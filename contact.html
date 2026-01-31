@@ -4,6 +4,10 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Contact — Phoenix Technology Solutions</title>
+
+  <link rel="icon" href="./assets/img/favicon.png" type="image/png" />
+  <link rel="apple-touch-icon" href="./assets/img/favicon.png" />
+
   <link rel="stylesheet" href="./assets/css/styles.css" />
 </head>
 <body>
@@ -11,7 +15,7 @@
 <header class="header">
   <div class="container headerRow">
     <a class="brand" href="./index.html">
-      <img class="brandLogo" src="./assets/img/logo.svg" alt="Phoenix Technology Solutions logo" />
+      <img class="brandLogo" src="./assets/img/logo.jpeg" alt="Phoenix Technology Solutions logo" />
       <div>Phoenix Technology Solutions</div>
     </a>
 
@@ -35,8 +39,8 @@
     <div class="kicker"><span class="dot"></span><span>Let’s talk</span></div>
     <h1 style="margin-top:12px;">Contact</h1>
     <p class="small" style="margin-top:10px; max-width:80ch;">
-      This form is currently a static demo for GitHub Pages. When you’re ready, we can connect it to email,
-      a backend API, or a CRM.
+      This form is currently a static demo (works great on GitHub Pages). When you’re ready, we can connect it to email
+      or a backend API.
     </p>
 
     <div style="margin-top:18px;" class="grid">
@@ -48,7 +52,7 @@
           <form class="form" data-contact-form style="margin-top:12px;">
             <input class="input" type="text" name="name" placeholder="Your name" required />
             <input class="input" type="email" name="email" placeholder="Email" required />
-            <input class="input" type="text" name="company" placeholder="Company (optional)" />
+            <input class="input" type="text" name="city" placeholder="City (optional)" />
             <textarea name="message" placeholder="What can we help with?" required></textarea>
 
             <button class="btn btnPrimary" type="submit">Send Message</button>
@@ -62,22 +66,14 @@
           <div class="cardTitle"><h2>Business info</h2><span class="badge">Florida</span></div>
           <hr class="sep" />
           <div class="small">
-            <strong>Email:</strong> email@phoenixtechsolutions.com<br/>
-            <strong>Phone:</strong> (555) 555-5555<br/>
+            <strong>Phone:</strong> <a href="tel:18633202101">(863) 320-2101</a><br/>
             <strong>Hours:</strong> Mon–Fri 9am–5pm<br/>
-            <strong>Service Area:</strong> Florida
+            <strong>Service:</strong> Mobile & virtual support
           </div>
 
-          <div style="margin-top:14px;" class="li">
-            <span class="check"></span>
-            <div>
-              <strong>Custom domain later</strong>
-              <div class="small">When you’re ready, we’ll point DNS + enable HTTPS.</div>
-            </div>
-          </div>
-
-          <div style="margin-top:14px;">
-            <a class="btn" href="./shop.html">Browse Shop</a>
+          <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap;">
+            <a class="btn btnPrimary" href="tel:18633202101">Call Now</a>
+            <a class="btn btnGhost" href="./shop.html">Browse Shop</a>
           </div>
         </div>
       </div>
@@ -89,7 +85,7 @@
   <div class="container footerGrid">
     <div>
       <div class="footerTitle">Phoenix Technology Solutions</div>
-      <div class="small">Phoenix Theme 2 website template. Hosted on GitHub Pages now, custom domain later.</div>
+      <div class="small">Mobile & virtual computer repair in Florida. Software built with long-term support.</div>
     </div>
     <div class="footerLinks">
       <div class="footerTitle">Pages</div>
@@ -101,9 +97,8 @@
     </div>
     <div class="footerLinks">
       <div class="footerTitle">Contact</div>
-      <a href="./contact.html">Request a quote</a>
-      <span class="small">email@phoenixtechsolutions.com</span><br/>
-      <span class="small">(555) 555-5555</span>
+      <a href="tel:18633202101" class="small">(863) 320-2101</a>
+      <span class="small">Florida</span>
     </div>
   </div>
 </footer>

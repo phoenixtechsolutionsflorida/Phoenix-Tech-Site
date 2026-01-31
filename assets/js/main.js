@@ -1,17 +1,17 @@
-// Small helper: mark active nav link based on current page
+// Active nav + basic demos
 (function(){
+  // Active nav
   const path = (location.pathname || "").split("/").pop() || "index.html";
   const current = path === "" ? "index.html" : path;
 
   document.querySelectorAll("[data-nav]").forEach(a => {
     const href = a.getAttribute("href");
     if (!href) return;
-
     const target = href.split("/").pop();
     if (target === current) a.classList.add("active");
   });
 
-  // Contact form demo (static): prevent reload + show a lightweight message.
+  // Contact form demo (static)
   const form = document.querySelector("[data-contact-form]");
   if (form){
     form.addEventListener("submit", (e) => {
@@ -22,4 +22,11 @@
       if (note) note.textContent = "This is a static demo form. Hook it to email/API when ready.";
     });
   }
+
+  // Shop buttons (placeholder)
+  document.querySelectorAll("[data-buy]").forEach(btn => {
+    btn.addEventListener("click", () => {
+      alert("Shop is not configured yet. We'll connect payments later (Stripe/Square/PayPal).");
+    });
+  });
 })();

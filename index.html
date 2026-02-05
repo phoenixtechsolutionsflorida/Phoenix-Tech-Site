@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Phoenix Technology Solutions</title>
 
-  <!-- Favicon: use PNG/ICO for best compatibility -->
+  <!-- Favicon -->
   <link rel="icon" href="./assets/img/favicon.png" type="image/png" />
   <link rel="apple-touch-icon" href="./assets/img/favicon.png" />
 
@@ -15,16 +15,19 @@
 
 <header class="header">
   <div class="container headerRow">
-    <a class="brand" href="./index.html">
+    <!-- Use ./ so URL is clean (no /index.html) -->
+    <a class="brand" href="./">
       <img class="brandLogo" src="./assets/img/logo.png" alt="Phoenix Tech Solutions logo" />
       <div>Phoenix Tech Solutions</div>
     </a>
 
     <nav class="nav" aria-label="Primary navigation">
-      <a data-nav href="./index.html">Home</a>
+      <!-- Use ./ so URL is clean (no /index.html) -->
+      <a data-nav href="./">Home</a>
       <a data-nav href="./services.html">Services</a>
       <a data-nav href="./shop.html">Shop</a>
-      <a data-nav href="./about.html">About</a>
+      <!-- About is now a folder route -->
+      <a data-nav href="./about/">About</a>
       <a data-nav href="./contact.html">Contact</a>
     </nav>
 
@@ -113,7 +116,7 @@
     </div>
   </section>
 
-  <!-- Shop CTA section - gives the page a natural "end" before the footer -->
+  <!-- Shop CTA section -->
   <section class="section" style="padding-top: 34px; padding-bottom: 72px;">
     <div class="container">
       <div class="cta">
@@ -132,7 +135,6 @@
   </section>
 </main>
 
-<!-- Make footer background solid so the page background doesn't "bleed through" -->
 <footer style="background: rgba(30,31,36,0.92);">
   <div class="container footerGrid">
     <div>
@@ -141,7 +143,7 @@
     </div>
     <div class="footerLinks">
       <div class="footerTitle">Pages</div>
-      <a href="./index.html">Home</a>
+      <a href="./">Home</a>
       <a href="./services.html">Services</a>
       <a href="./shop.html">Shop</a>
       <a href="./about/">About</a>

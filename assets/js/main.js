@@ -1,18 +1,63 @@
-(function(){
-  // Active nav
-  const path = (location.pathname || "").split("/").pop() || "index.html";
-  const current = path === "" ? "index.html" : path;
+(function () {
+  // Normalize a path or href to a comparable "route key"
+  // Examples:
+  // "/" -> ""
+  // "/index.html" -> ""
+  // "/about/" -> "about"
+  // "/about/index.html" -> "about"
+  // "/services.html" -> "services.html"
+  function routeKey(input) {
+    let p = (input || "").split("?")[0].split("#")[0];
 
-  document.querySelectorAll("[data-nav]").forEach(a => {
+    // If it's a full URL, extract pathname safely
+    try {
+      if (p.startsWith("http://") || p.startsWith("https://")) {
+        p = new URL(p).pathname;
+      }
+    } catch (_) {}
+
+    // Trim trailing slashes
+    p = p.replace(/\/+$/, "");
+
+    // Get last segment
+    const parts = p.split("/").filter(Boolean);
+
+    // Root or empty -> home
+    if (parts.length === 0) return "";
+
+    const last = parts[parts.length - 1];
+
+    // Treat index.html as its folder (or home if at root)
+    if (last.toLowerCase() === "index.html") {
+      return parts.length === 1 ? "" : parts[parts.length - 2];
+    }
+
+    // If there is no extension, treat it as a folder route key
+    // (e.g. "/about" or "/about/" -> "about")
+    if (!last.includes(".")) return last;
+
+    // Otherwise return the filename (services.html, shop.html, etc.)
+    return last;
+  }
+
+  // Active nav
+  const currentKey = routeKey(location.pathname);
+
+  document.querySelectorAll("[data-nav]").forEach((a) => {
     const href = a.getAttribute("href");
     if (!href) return;
-    const target = href.split("/").pop();
-    if (target === current) a.classList.add("active");
+
+    const targetKey = routeKey(href);
+
+    // Home should match "" key
+    if (targetKey === currentKey) {
+      a.classList.add("active");
+    }
   });
 
   // Contact form demo (static)
   const form = document.querySelector("[data-contact-form]");
-  if (form){
+  if (form) {
     form.addEventListener("submit", (e) => {
       e.preventDefault();
       const btn = form.querySelector("button[type='submit']");
@@ -23,7 +68,7 @@
   }
 
   // Placeholder buy button
-  document.querySelectorAll("[data-buy]").forEach(btn => {
+  document.querySelectorAll("[data-buy]").forEach((btn) => {
     btn.addEventListener("click", () => {
       alert("Checkout is not configured yet. We'll connect payments later (Stripe/Square/PayPal).");
     });
@@ -68,7 +113,7 @@
 
   // Modal wiring (only on shop page)
   const modal = document.getElementById("productModal");
-  if (modal){
+  if (modal) {
     const titleEl = document.getElementById("pmTitle");
     const kickerEl = document.getElementById("pmKicker");
     const descEl = document.getElementById("pmDesc");
@@ -77,7 +122,7 @@
 
     let lastFocus = null;
 
-    function openModal(card){
+    function openModal(card) {
       const key = card.getAttribute("data-product");
       const title = card.getAttribute("data-title") || "Product";
       const banner = card.getAttribute("data-banner") || "";
@@ -92,7 +137,7 @@
       bannerEl.alt = `${title} banner`;
 
       featuresEl.innerHTML = "";
-      (info.features || []).forEach(f => {
+      (info.features || []).forEach((f) => {
         const li = document.createElement("li");
         li.textContent = f;
         featuresEl.appendChild(li);
@@ -108,23 +153,24 @@
       document.body.style.overflow = "hidden";
     }
 
-    function closeModal(){
+    function closeModal() {
       modal.classList.remove("isOpen");
       modal.setAttribute("aria-hidden", "true");
       document.body.style.overflow = "";
       if (lastFocus) lastFocus.focus();
     }
 
-    document.querySelectorAll(".productCard").forEach(card => {
+    document.querySelectorAll(".productCard").forEach((card) => {
       const openBtn = card.querySelector("[data-open-product]");
       const open = () => openModal(card);
 
       card.addEventListener("click", () => open());
 
-      if (openBtn) openBtn.addEventListener("click", (e) => {
-        e.stopPropagation();
-        open();
-      });
+      if (openBtn)
+        openBtn.addEventListener("click", (e) => {
+          e.stopPropagation();
+          open();
+        });
 
       card.addEventListener("keydown", (e) => {
         if (e.key === "Enter" || e.key === " ") {

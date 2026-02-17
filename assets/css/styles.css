@@ -256,7 +256,7 @@ hr.sep{
 .cta h3{ font-size: 1.2rem; }
 .cta .small{ max-width: 70ch; }
 
-/* Footer */
+/* Footer (default for pages not yet converted to footerSurface) */
 footer{
   padding: 34px 0 44px;
   color: var(--muted);
@@ -271,6 +271,24 @@ footer{
 .footerTitle{ color: var(--text); font-weight: 800; margin-bottom: 10px; }
 .footerLinks a{ display:block; padding: 6px 0; color: var(--muted); }
 .footerLinks a:hover{ color: var(--text); }
+
+/* ✅ Footer Surface (fixes CTA being split across gradient/grey) */
+.footerSurface{
+  background: rgba(30,31,36,0.92);
+  border-top: 1px solid rgba(52,54,61,0.70);
+}
+
+/* When footer is inside footerSurface, remove footer’s own background/border to avoid seams */
+.footerSurface footer{
+  background: transparent;
+  border-top: 0;
+  padding-top: 26px;
+}
+
+/* Optional class for clarity (if you used footerInner in HTML) */
+.footerInner{
+  background: transparent;
+}
 
 /* Forms */
 .form{ display:grid; gap: 12px; }

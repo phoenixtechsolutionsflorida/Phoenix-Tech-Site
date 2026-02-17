@@ -15,18 +15,16 @@
 
 <header class="header">
   <div class="container headerRow">
-    <!-- Use ./ so URL is clean (no /index.html) -->
     <a class="brand" href="./">
       <img class="brandLogo" src="./assets/img/logo.png" alt="Phoenix Tech Solutions logo" />
       <div>Phoenix Tech Solutions</div>
     </a>
 
     <nav class="nav" aria-label="Primary navigation">
-      <!-- Use ./ so URL is clean (no /index.html) -->
       <a data-nav href="./">Home</a>
-      <a data-nav href="./services.html">Services</a>
+      <!-- Services is now a folder route -->
+      <a data-nav href="./services/">Services</a>
       <a data-nav href="./shop.html">Shop</a>
-      <!-- About is now a folder route -->
       <a data-nav href="./about/">About</a>
       <a data-nav href="./contact.html">Contact</a>
     </nav>
@@ -57,7 +55,8 @@
 
         <div style="margin-top:18px; display:flex; gap:12px; flex-wrap:wrap;">
           <a class="btn btnPrimary" href="./contact.html">Request a Quote</a>
-          <a class="btn" href="./services.html">View Services</a>
+          <!-- Updated to folder route -->
+          <a class="btn" href="./services/">View Services</a>
           <a class="btn btnGhost" href="tel:18633202101">Call (863) 320-2101</a>
         </div>
       </div>
@@ -116,7 +115,6 @@
     </div>
   </section>
 
-  <!-- Shop CTA section -->
   <section class="section" style="padding-top: 34px; padding-bottom: 72px;">
     <div class="container">
       <div class="cta">
@@ -127,7 +125,8 @@
           </div>
         </div>
         <div style="display:flex; gap:10px; flex-wrap:wrap;">
-          <a class="btn btnGhost" href="./services.html">Services</a>
+          <!-- Updated to folder route -->
+          <a class="btn btnGhost" href="./services/">Services</a>
           <a class="btn btnPrimary" href="./shop.html">Shop</a>
         </div>
       </div>
@@ -144,7 +143,8 @@
     <div class="footerLinks">
       <div class="footerTitle">Pages</div>
       <a href="./">Home</a>
-      <a href="./services.html">Services</a>
+      <!-- Updated to folder route -->
+      <a href="./services/">Services</a>
       <a href="./shop.html">Shop</a>
       <a href="./about/">About</a>
       <a href="./contact.html">Contact</a>

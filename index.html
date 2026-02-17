@@ -63,46 +63,41 @@
         Reliable tech support that comes to you.
       </div>
 
-      <!-- What we offer (horizontal row) -->
-      <div style="margin-top:22px; display:flex; gap:12px; flex-wrap:wrap; justify-content:center;">
-        <div class="li" style="flex:1 1 220px; max-width:240px;">
+      <!-- What we offer (single line, no wrapping) -->
+      <div
+        style="
+          margin-top:22px;
+          display:flex;
+          gap:12px;
+          justify-content:center;
+          flex-wrap:nowrap;          /* <-- no wrapping */
+          overflow-x:auto;           /* <-- if screen is too small, it scrolls instead of wrapping */
+          padding-bottom: 6px;       /* space for scrollbar on some browsers */
+        "
+      >
+        <div class="li" style="flex:0 0 auto; white-space:nowrap;">
           <span class="check"></span>
-          <div>
-            <strong>Mobile Repair</strong>
-            <div class="small">We come to you.</div>
-          </div>
+          <div><strong>Mobile Repair</strong></div>
         </div>
 
-        <div class="li" style="flex:1 1 220px; max-width:240px;">
+        <div class="li" style="flex:0 0 auto; white-space:nowrap;">
           <span class="check"></span>
-          <div>
-            <strong>Virtual Repair</strong>
-            <div class="small">Remote help.</div>
-          </div>
+          <div><strong>Virtual Repair</strong></div>
         </div>
 
-        <div class="li" style="flex:1 1 220px; max-width:240px;">
+        <div class="li" style="flex:0 0 auto; white-space:nowrap;">
           <span class="check"></span>
-          <div>
-            <strong>Hardware & Software</strong>
-            <div class="small">Fixes & cleanup.</div>
-          </div>
+          <div><strong>Hardware & Software</strong></div>
         </div>
 
-        <div class="li" style="flex:1 1 220px; max-width:240px;">
+        <div class="li" style="flex:0 0 auto; white-space:nowrap;">
           <span class="check"></span>
-          <div>
-            <strong>System Changeover</strong>
-            <div class="small">New PC setup.</div>
-          </div>
+          <div><strong>System Changeover</strong></div>
         </div>
 
-        <div class="li" style="flex:1 1 220px; max-width:240px;">
+        <div class="li" style="flex:0 0 auto; white-space:nowrap;">
           <span class="check"></span>
-          <div>
-            <strong>Lifetime Guarantee</strong>
-            <div class="small">On our software.</div>
-          </div>
+          <div><strong>Lifetime Guarantee</strong></div>
         </div>
       </div>
 

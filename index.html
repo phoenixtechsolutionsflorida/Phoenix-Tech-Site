@@ -7,7 +7,7 @@
 
   <!-- Favicon -->
   <link rel="icon" href="./assets/img/favicon.png" type="image/png" />
-  <link rel="apple-touch-icon" href="./assets/img/favicon.ico" />
+  <link rel="apple-touch-icon" href="./assets/img/favicon.png" />
 
   <link rel="stylesheet" href="./assets/css/styles.css" />
 </head>
@@ -29,90 +29,93 @@
     </nav>
 
     <div class="actions">
-      <a class="btn btnGhost" href="./contact.html">Get Quote</a>
+      <a class="btn btnGhost" href="./contact/">Get Quote</a>
       <a class="btn btnPrimary" href="./shop/">Shop</a>
     </div>
   </div>
 </header>
 
 <main>
+  <!-- Centered hero -->
   <section class="hero">
-    <div class="container grid">
-      <div class="heroLeft">
-        <div class="kicker"><span class="dot"></span><span>Welcome to Phoenix Tech Solutions!</span></div>
+    <div class="container" style="text-align:center;">
+      <!-- Center logo -->
+      <img
+        src="./assets/img/logo.png"
+        alt="Phoenix Tech Solutions logo"
+        style="
+          width: 150px;
+          height: 150px;
+          border-radius: 999px;
+          object-fit: cover;
+          border: 1px solid rgba(255,255,255,0.10);
+          background: rgba(32,33,38,0.55);
+          box-shadow: 0 16px 40px rgba(0,0,0,0.35);
+        "
+      />
 
-        <h1 style="margin-top:14px;">
-          Reliable tech support that comes to you!
-        </h1>
+      <!-- Welcome text -->
+      <h1 style="margin-top:18px; letter-spacing:-0.02em;">
+        WELCOME TO PHOENIX TECH SOLUTIONS
+      </h1>
 
-        <p class="small">
-          Phoenix Tech Solutions is a full-service technology company offering mobile repairs, in-home support, and virtual assistance for individuals and small businesses.
-          We specialize in diagnosing and repairing hardware and software issues, setting up new systems, improving performance, securing devices, and providing clear, honest consultations.
-          We also develop custom software solutions tailored to your needs—whether you’re streamlining a workflow, automating tasks, or launching something new.
-          If it plugs in, powers on, or connects to the internet, we can help.
-        </p>
-
-        <div style="margin-top:18px; display:flex; gap:12px; flex-wrap:wrap;">
-          <a class="btn btnPrimary" href="./contact.html">Request a Quote</a>
-          <a class="btn" href="./services/">View Services</a>
-          <a class="btn btnGhost" href="tel:18633202101">Call (863) 320-2101</a>
-        </div>
+      <div class="small" style="margin-top:10px;">
+        Reliable tech support that comes to you.
       </div>
 
-      <div class="heroRight">
-        <div class="heroPanel">
-          <div class="cardTitle">
-            <h3>What We Offer</h3>
+      <!-- What we offer (horizontal row) -->
+      <div style="margin-top:22px; display:flex; gap:12px; flex-wrap:wrap; justify-content:center;">
+        <div class="li" style="flex:1 1 220px; max-width:240px;">
+          <span class="check"></span>
+          <div>
+            <strong>Mobile Repair</strong>
+            <div class="small">We come to you.</div>
           </div>
-          <hr class="sep" />
+        </div>
 
-          <div class="list">
-            <div class="li">
-              <span class="check"></span>
-              <div>
-                <strong>Mobile Computer Repair</strong>
-                <div class="small">We come to you for setup, troubleshooting, and repairs.</div>
-              </div>
-            </div>
+        <div class="li" style="flex:1 1 220px; max-width:240px;">
+          <span class="check"></span>
+          <div>
+            <strong>Virtual Repair</strong>
+            <div class="small">Remote help.</div>
+          </div>
+        </div>
 
-            <div class="li">
-              <span class="check"></span>
-              <div>
-                <strong>Virtual Repair</strong>
-                <div class="small">Quick remote help for software issues and guidance.</div>
-              </div>
-            </div>
+        <div class="li" style="flex:1 1 220px; max-width:240px;">
+          <span class="check"></span>
+          <div>
+            <strong>Hardware & Software</strong>
+            <div class="small">Fixes & cleanup.</div>
+          </div>
+        </div>
 
-            <div class="li">
-              <span class="check"></span>
-              <div>
-                <strong>Software & Hardware Repairs</strong>
-                <div class="small">Diagnostics, cleanup, replacements, and performance fixes.</div>
-              </div>
-            </div>
+        <div class="li" style="flex:1 1 220px; max-width:240px;">
+          <span class="check"></span>
+          <div>
+            <strong>System Changeover</strong>
+            <div class="small">New PC setup.</div>
+          </div>
+        </div>
 
-            <div class="li">
-              <span class="check"></span>
-              <div>
-                <strong>System Changeover Service</strong>
-                <div class="small">New computer? Need help setting up a new system? We're here!</div>
-              </div>
-            </div>
-
-            <div class="li">
-              <span class="check"></span>
-              <div>
-                <strong>Lifetime Guarantee on Our Software</strong>
-                <div class="small">All custom software and products we sell are backed long-term, lifetime guarantee!</div>
-              </div>
-            </div>
+        <div class="li" style="flex:1 1 220px; max-width:240px;">
+          <span class="check"></span>
+          <div>
+            <strong>Lifetime Guarantee</strong>
+            <div class="small">On our software.</div>
           </div>
         </div>
       </div>
 
+      <!-- Buttons under the offers row -->
+      <div style="margin-top:18px; display:flex; gap:12px; flex-wrap:wrap; justify-content:center;">
+        <a class="btn btnPrimary" href="./contact/">Request a Quote</a>
+        <a class="btn" href="./services/">View Services</a>
+        <a class="btn btnGhost" href="tel:18633202101">Call (863) 320-2101</a>
+      </div>
     </div>
   </section>
 
+  <!-- Shop CTA section -->
   <section class="section" style="padding-top: 34px; padding-bottom: 72px;">
     <div class="container">
       <div class="cta">
@@ -143,7 +146,7 @@
       <a href="./services/">Services</a>
       <a href="./shop/">Shop</a>
       <a href="./about/">About</a>
-      <a href="./contact.html">Contact</a>
+      <a href="./contact/">Contact</a>
     </div>
     <div class="footerLinks">
       <div class="footerTitle">Contact</div>

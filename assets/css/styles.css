@@ -22,6 +22,7 @@
 
 *{ box-sizing:border-box; }
 html,body{ height:100%; }
+
 body{
   margin:0;
   font-family: var(--font);
@@ -56,6 +57,13 @@ h2{ font-size: clamp(1.6rem, 2.5vw, 2.2rem); letter-spacing:-0.01em; }
 h3{ font-size: 1.15rem; }
 
 .section{ padding: 64px 0; }
+
+/* ✅ FIX: give inner pages a solid surface so CTAs don't "split" on the gradient */
+main.section{
+  background: rgba(30,31,36,0.92);
+  padding: 64px 0 72px;
+}
+
 .grid{
   display:grid;
   grid-template-columns: repeat(12, 1fr);
@@ -256,12 +264,13 @@ hr.sep{
 .cta h3{ font-size: 1.2rem; }
 .cta .small{ max-width: 70ch; }
 
-/* Footer (default for pages not yet converted to footerSurface) */
+/* Footer */
+/* ✅ FIX: make footer a solid surface so nothing looks "split" at the bottom */
 footer{
   padding: 34px 0 44px;
   color: var(--muted);
   border-top: 1px solid rgba(255,255,255,0.06);
-  background: rgba(30,31,36,0.55);
+  background: rgba(30,31,36,0.92);
 }
 .footerGrid{
   display:grid;
@@ -271,24 +280,6 @@ footer{
 .footerTitle{ color: var(--text); font-weight: 800; margin-bottom: 10px; }
 .footerLinks a{ display:block; padding: 6px 0; color: var(--muted); }
 .footerLinks a:hover{ color: var(--text); }
-
-/* ✅ Footer Surface (fixes CTA being split across gradient/grey) */
-.footerSurface{
-  background: rgba(30,31,36,0.92);
-  border-top: 1px solid rgba(52,54,61,0.70);
-}
-
-/* When footer is inside footerSurface, remove footer’s own background/border to avoid seams */
-.footerSurface footer{
-  background: transparent;
-  border-top: 0;
-  padding-top: 26px;
-}
-
-/* Optional class for clarity (if you used footerInner in HTML) */
-.footerInner{
-  background: transparent;
-}
 
 /* Forms */
 .form{ display:grid; gap: 12px; }

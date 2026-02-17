@@ -39,6 +39,7 @@
   <!-- Centered hero -->
   <section class="hero">
     <div class="container" style="text-align:center;">
+
       <!-- Center logo -->
       <img
         src="./assets/img/logo.png"
@@ -63,41 +64,31 @@
         Reliable tech support that comes to you.
       </div>
 
-      <!-- What we offer (single line, no wrapping) -->
-      <div
-        style="
-          margin-top:22px;
-          display:flex;
-          gap:12px;
-          justify-content:center;
-          flex-wrap:nowrap;          /* <-- no wrapping */
-          overflow-x:auto;           /* <-- if screen is too small, it scrolls instead of wrapping */
-          padding-bottom: 6px;       /* space for scrollbar on some browsers */
-        "
-      >
-        <div class="li" style="flex:0 0 auto; white-space:nowrap;">
+      <!-- What we offer (single row, no wrap, no scroll) -->
+      <div class="offerRow">
+        <div class="offerItem">
           <span class="check"></span>
-          <div><strong>Mobile Repair</strong></div>
+          <strong>Mobile Repair</strong>
         </div>
 
-        <div class="li" style="flex:0 0 auto; white-space:nowrap;">
+        <div class="offerItem">
           <span class="check"></span>
-          <div><strong>Virtual Repair</strong></div>
+          <strong>Virtual Repair</strong>
         </div>
 
-        <div class="li" style="flex:0 0 auto; white-space:nowrap;">
+        <div class="offerItem">
           <span class="check"></span>
-          <div><strong>Hardware & Software</strong></div>
+          <strong>Hardware &amp; Software</strong>
         </div>
 
-        <div class="li" style="flex:0 0 auto; white-space:nowrap;">
+        <div class="offerItem">
           <span class="check"></span>
-          <div><strong>System Changeover</strong></div>
+          <strong>System Changeover</strong>
         </div>
 
-        <div class="li" style="flex:0 0 auto; white-space:nowrap;">
+        <div class="offerItem">
           <span class="check"></span>
-          <div><strong>Lifetime Guarantee</strong></div>
+          <strong>Lifetime Guarantee</strong>
         </div>
       </div>
 
@@ -107,6 +98,7 @@
         <a class="btn" href="./services/">View Services</a>
         <a class="btn btnGhost" href="tel:18633202101">Call (863) 320-2101</a>
       </div>
+
     </div>
   </section>
 

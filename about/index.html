@@ -5,40 +5,45 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>About — Phoenix Tech Solutions</title>
 
-  <link rel="icon" href="./assets/img/favicon.png" type="image/png" />
-  <link rel="apple-touch-icon" href="./assets/img/favicon.png" />
+  <link rel="icon" href="../assets/img/favicon.png" type="image/png" />
+  <link rel="apple-touch-icon" href="../assets/img/favicon.png" />
 
-  <link rel="stylesheet" href="./assets/css/styles.css" />
+  <link rel="stylesheet" href="../assets/css/styles.css" />
 </head>
 <body>
 
 <header class="header">
   <div class="container headerRow">
-    <a class="brand" href="./index.html">
-      <img class="brandLogo" src="./assets/img/logo.png" alt="Phoenix Technology Solutions logo" />
+    <!-- from /about/ go back to site root -->
+    <a class="brand" href="../">
+      <img class="brandLogo" src="../assets/img/logo.png" alt="Phoenix Technology Solutions logo" />
       <div>Phoenix Tech Solutions</div>
     </a>
 
     <nav class="nav" aria-label="Primary navigation">
-      <a data-nav href="./index.html">Home</a>
-      <a data-nav href="./services.html">Services</a>
-      <a data-nav href="./shop.html">Shop</a>
-      <a data-nav href="./about.html">About</a>
-      <a data-nav href="./contact.html">Contact</a>
+      <a data-nav href="../">Home</a>
+      <!-- If services is now /services/ -->
+      <a data-nav href="../services/">Services</a>
+      <a data-nav href="../shop.html">Shop</a>
+      <a data-nav href="../about/">About</a>
+      <a data-nav href="../contact.html">Contact</a>
     </nav>
 
     <div class="actions">
-      <a class="btn btnGhost" href="./contact.html">Get Quote</a>
-      <a class="btn btnPrimary" href="./shop.html">Shop</a>
+      <a class="btn btnGhost" href="../contact.html">Get Quote</a>
+      <a class="btn btnPrimary" href="../shop.html">Shop</a>
     </div>
   </div>
 </header>
 
 <main class="section">
   <div class="container">
+    <div class="kicker"><span class="dot"></span><span>Who we are</span></div>
     <h1 style="margin-top:12px;">About</h1>
 
     <p class="small" style="margin-top:10px; max-width:88ch;">
+      Phoenix Technology Solutions is a faith-based company committed to helping people for a fair price.
+      Our goal is to educate and serve our community while solving technical problems with clarity, honesty, and respect.
     </p>
 
     <div style="margin-top:18px;" class="grid">
@@ -51,7 +56,7 @@
 
           <hr class="sep" />
 
-          <h2>What We Do</h2>
+          <h2>How We Serve</h2>
           <div class="list">
             <div class="li">
               <span class="check"></span>
@@ -83,7 +88,7 @@
           <div class="cardTitle"><h2>What We Offer</h2></div>
           <hr class="sep" />
           <div class="small">
-            • Mobile / In-House Computer Repair<br/>
+            • Mobile / In-Home Computer Repair<br/>
             • Virtual Repair<br/>
             • Hardware & Software Repair<br/>
             • System Changeover Service<br/>
@@ -91,12 +96,13 @@
           </div>
 
           <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap;">
+            <a class="btn btnPrimary" href="tel:18633202101">Call (863) 320-2101</a>
+            <a class="btn btnGhost" href="../contact.html">Contact</a>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Nice natural page ending before footer -->
     <section style="margin-top:18px;">
       <div class="cta">
         <div>
@@ -105,7 +111,7 @@
         </div>
         <div style="display:flex; gap:10px; flex-wrap:wrap;">
           <a class="btn btnGhost" href="tel:18633202101">Call (863) 320-2101</a>
-          <a class="btn btnPrimary" href="./contact.html">Contact</a>
+          <a class="btn btnPrimary" href="../contact.html">Contact</a>
         </div>
       </div>
     </section>
@@ -113,7 +119,6 @@
   </div>
 </main>
 
-<!-- Solid footer to prevent background bleed -->
 <footer style="background: rgba(30,31,36,0.92);">
   <div class="container footerGrid">
     <div>
@@ -122,11 +127,11 @@
     </div>
     <div class="footerLinks">
       <div class="footerTitle">Pages</div>
-      <a href="./index.html">Home</a>
-      <a href="./services.html">Services</a>
-      <a href="./shop.html">Shop</a>
-      <a href="./about.html">About</a>
-      <a href="./contact.html">Contact</a>
+      <a href="../">Home</a>
+      <a href="../services/">Services</a>
+      <a href="../shop.html">Shop</a>
+      <a href="../about/">About</a>
+      <a href="../contact.html">Contact</a>
     </div>
     <div class="footerLinks">
       <div class="footerTitle">Contact</div>
@@ -136,6 +141,6 @@
   </div>
 </footer>
 
-<script src="./assets/js/main.js"></script>
+<script src="../assets/js/main.js"></script>
 </body>
 </html>

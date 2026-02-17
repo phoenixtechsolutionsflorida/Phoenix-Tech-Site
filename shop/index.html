@@ -3,155 +3,185 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Phoenix Technology Solutions</title>
+  <title>Shop — Phoenix Technology Solutions</title>
 
-  <link rel="icon" href="./assets/img/favicon.png" type="image/png" />
-  <link rel="apple-touch-icon" href="./assets/img/favicon.png" />
+  <link rel="icon" href="../assets/img/favicon.png" type="image/png" />
+  <link rel="apple-touch-icon" href="../assets/img/favicon.png" />
 
-  <link rel="stylesheet" href="./assets/css/styles.css" />
+  <link rel="stylesheet" href="../assets/css/styles.css" />
 </head>
 <body>
 
 <header class="header">
   <div class="container headerRow">
-    <a class="brand" href="./">
-      <img class="brandLogo" src="./assets/img/logo.png" alt="Phoenix Tech Solutions logo" />
-      <div>Phoenix Tech Solutions</div>
+    <a class="brand" href="../">
+      <img class="brandLogo" src="../assets/img/logo.png" alt="Phoenix Technology Solutions logo" />
+      <div>Phoenix Technology Solutions</div>
     </a>
 
     <nav class="nav" aria-label="Primary navigation">
-      <a data-nav href="./">Home</a>
-      <a data-nav href="./services/">Services</a>
-      <a data-nav href="./shop/">Shop</a>
-      <a data-nav href="./about/">About</a>
-      <a data-nav href="./contact.html">Contact</a>
+      <a data-nav href="../">Home</a>
+      <a data-nav href="../services/">Services</a>
+      <a data-nav href="../shop/">Shop</a>
+      <a data-nav href="../about/">About</a>
+      <a data-nav href="../contact.html">Contact</a>
     </nav>
 
     <div class="actions">
-      <a class="btn btnGhost" href="./contact.html">Get Quote</a>
-      <a class="btn btnPrimary" href="./shop/">Shop</a>
+      <a class="btn btnGhost" href="../contact.html">Get Quote</a>
+      <a class="btn btnPrimary" href="../shop/">Shop</a>
     </div>
   </div>
 </header>
 
-<main>
-  <section class="hero">
-    <div class="container grid">
-      <div class="heroLeft">
-        <div class="kicker"><span class="dot"></span><span>Welcome to Phoenix Tech Solutions!</span></div>
+<main class="section">
+  <div class="container">
+    <div class="kicker"><span class="dot"></span><span>Software store</span></div>
+    <h1 style="margin-top:12px;">Shop</h1>
+    <p class="small" style="margin-top:10px; max-width:85ch;">
+      Click a product to view details. Checkout is <strong>coming soon</strong>.
+    </p>
 
-        <h1 style="margin-top:14px;">
-          Reliable tech support that comes to you!
-        </h1>
+    <div class="shopGrid">
 
-        <p class="small">
-          Phoenix Tech Solutions is a full-service technology company offering mobile repairs, in-home support, and virtual assistance for individuals and small businesses.
-          We specialize in diagnosing and repairing hardware and software issues, setting up new systems, improving performance, securing devices, and providing clear, honest consultations.
-          We also develop custom software solutions tailored to your needs—whether you’re streamlining a workflow, automating tasks, or launching something new.
-          If it plugs in, powers on, or connects to the internet, we can help.
-        </p>
-
-        <div style="margin-top:18px; display:flex; gap:12px; flex-wrap:wrap;">
-          <a class="btn btnPrimary" href="./contact.html">Request a Quote</a>
-          <a class="btn" href="./services/">View Services</a>
-          <a class="btn btnGhost" href="tel:18633202101">Call (863) 320-2101</a>
+      <!-- Backup Utility -->
+      <div class="card productCard" role="button" tabindex="0"
+           data-product="backup"
+           data-title="Phoenix Backup Utility"
+           data-banner="../assets/img/phoenix-backup-utility.png">
+        <div class="cardInner">
+          <div class="productArt">
+            <img src="../assets/img/phoenix-backup-utility.png" alt="Phoenix Backup Utility banner" loading="lazy" />
+          </div>
+          <div style="margin-top:12px;" class="cardTitle">
+            <h3>Phoenix Backup Utility</h3>
+            <span class="tag">Windows</span>
+          </div>
+          <p class="small" style="margin-top:10px;">Simple backups, clean UI, easy restore workflow.</p>
+          <div class="priceRow">
+            <div class="price">Coming Soon</div>
+            <button class="btn btnPrimary" type="button" data-open-product>View</button>
+          </div>
         </div>
       </div>
 
-      <div class="heroRight">
-        <div class="heroPanel">
-          <div class="cardTitle">
-            <h3>What We Offer</h3>
+      <!-- Antivirus -->
+      <div class="card productCard" role="button" tabindex="0"
+           data-product="antivirus"
+           data-title="Phoenix Antivirus"
+           data-banner="../assets/img/phoenix-antivirus.png">
+        <div class="cardInner">
+          <div class="productArt">
+            <img src="../assets/img/phoenix-antivirus.png" alt="Phoenix Antivirus banner" loading="lazy" />
           </div>
-          <hr class="sep" />
+          <div style="margin-top:12px;" class="cardTitle">
+            <h3>Phoenix Antivirus</h3>
+            <span class="tag">Windows</span>
+          </div>
+          <p class="small" style="margin-top:10px;">Modern protection UI and future security tools.</p>
+          <div class="priceRow">
+            <div class="price">Coming Soon</div>
+            <button class="btn btnPrimary" type="button" data-open-product>View</button>
+          </div>
+        </div>
+      </div>
 
-          <div class="list">
-            <div class="li">
-              <span class="check"></span>
-              <div>
-                <strong>Mobile Computer Repair</strong>
-                <div class="small">We come to you for setup, troubleshooting, and repairs.</div>
-              </div>
-            </div>
-
-            <div class="li">
-              <span class="check"></span>
-              <div>
-                <strong>Virtual Repair</strong>
-                <div class="small">Quick remote help for software issues and guidance.</div>
-              </div>
-            </div>
-
-            <div class="li">
-              <span class="check"></span>
-              <div>
-                <strong>Software & Hardware Repairs</strong>
-                <div class="small">Diagnostics, cleanup, replacements, and performance fixes.</div>
-              </div>
-            </div>
-
-            <div class="li">
-              <span class="check"></span>
-              <div>
-                <strong>System Changeover Service</strong>
-                <div class="small">New computer? Need help setting up a new system? We're here!</div>
-              </div>
-            </div>
-
-            <div class="li">
-              <span class="check"></span>
-              <div>
-                <strong>Lifetime Guarantee on Our Software</strong>
-                <div class="small">All custom software and products we sell are backed long-term, lifetime guarantee!</div>
-              </div>
-            </div>
+      <!-- CAD -->
+      <div class="card productCard" role="button" tabindex="0"
+           data-product="cad"
+           data-title="Phoenix CAD"
+           data-banner="../assets/img/phoenix-cad.png">
+        <div class="cardInner">
+          <div class="productArt">
+            <img src="../assets/img/phoenix-cad.png" alt="Phoenix CAD banner" loading="lazy" />
+          </div>
+          <div style="margin-top:12px;" class="cardTitle">
+            <h3>Phoenix CAD</h3>
+            <span class="tag">Dispatch</span>
+          </div>
+          <p class="small" style="margin-top:10px;">Computer-aided dispatch program built for clarity and speed.</p>
+          <div class="priceRow">
+            <div class="price">Coming Soon</div>
+            <button class="btn btnPrimary" type="button" data-open-product>View</button>
           </div>
         </div>
       </div>
 
     </div>
-  </section>
 
-  <section class="section" style="padding-top: 34px; padding-bottom: 72px;">
-    <div class="container">
-      <div class="cta">
-        <div>
-          <h3>Interested in new software? Check out our shop.</h3>
-          <div class="small" style="margin-top:6px;">
-            Browse our Phoenix products — more releases and checkout options coming soon.
-          </div>
-        </div>
-        <div style="display:flex; gap:10px; flex-wrap:wrap;">
-          <a class="btn btnGhost" href="./services/">Services</a>
-          <a class="btn btnPrimary" href="./shop/">Shop</a>
-        </div>
+    <div style="margin-top:18px; margin-bottom:72px;" class="cta">
+      <div>
+        <h3>Lifetime guarantee</h3>
+        <div class="small">All products and custom software we sell are backed long-term.</div>
       </div>
+      <a class="btn btnPrimary" href="../contact.html">Questions?</a>
     </div>
-  </section>
+  </div>
 </main>
 
 <footer style="background: rgba(30,31,36,0.92);">
   <div class="container footerGrid">
     <div>
       <div class="footerTitle">Phoenix Technology Solutions</div>
-      <div class="small">Serving with Integrity, working with Excellence</div>
+      <div class="small">Mobile & virtual computer repair in Florida. Software built with long-term support.</div>
     </div>
     <div class="footerLinks">
       <div class="footerTitle">Pages</div>
-      <a href="./">Home</a>
-      <a href="./services/">Services</a>
-      <a href="./shop/">Shop</a>
-      <a href="./about/">About</a>
-      <a href="./contact.html">Contact</a>
+      <a href="../">Home</a>
+      <a href="../services/">Services</a>
+      <a href="../shop/">Shop</a>
+      <a href="../about/">About</a>
+      <a href="../contact.html">Contact</a>
     </div>
     <div class="footerLinks">
       <div class="footerTitle">Contact</div>
       <a href="tel:18633202101" class="small">(863) 320-2101</a>
-      <span class="small">©2026 Phoenix Technology Solutions</span>
+      <span class="small">Florida</span>
     </div>
   </div>
 </footer>
 
-<script src="./assets/js/main.js"></script>
+<!-- Product Modal -->
+<div class="modalBackdrop" id="productModal" aria-hidden="true">
+  <div class="modalCard" role="dialog" aria-modal="true" aria-labelledby="pmTitle">
+    <div class="modalTop">
+      <div class="modalTitleWrap">
+        <div class="kicker"><span class="dot"></span><span id="pmKicker">Product</span></div>
+        <h2 id="pmTitle" style="margin-top:10px;">Product</h2>
+        <div class="small" id="pmPrice" style="margin-top:6px;">Checkout: Coming Soon</div>
+      </div>
+      <button class="btn btnGhost modalClose" type="button" data-close-modal aria-label="Close">Close</button>
+    </div>
+
+    <div class="modalBanner">
+      <img id="pmBanner" src="" alt="" />
+    </div>
+
+    <div class="modalBody">
+      <div class="modalCols">
+        <div class="card">
+          <div class="cardInner">
+            <h3>Description</h3>
+            <p class="small" id="pmDesc" style="margin-top:10px;"></p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="cardInner">
+            <h3>Highlights</h3>
+            <ul class="featureList" id="pmFeatures"></ul>
+            <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap;">
+              <button class="btn btnPrimary" type="button" data-buy>Buy (coming soon)</button>
+              <a class="btn btnGhost" href="../contact.html">Ask a question</a>
+            </div>
+            <div class="small" style="margin-top:10px;">We’ll connect payments later (Stripe/Square/PayPal).</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="../assets/js/main.js"></script>
 </body>
 </html>

@@ -34,9 +34,10 @@
   </div>
 </header>
 
-<main class="section" style="padding-bottom: 84px;">
+<main class="section">
   <div class="container">
     <div class="kicker"><span class="dot"></span><span>What we do</span></div>
+
     <h1 style="margin-top:12px;">Services</h1>
     <p class="small" style="margin-top:10px; max-width:85ch;">
       We offer mobile and virtual computer repair, software & hardware support, and done-for-you services like system changeover.
@@ -45,17 +46,26 @@
 
     <div style="margin-top:18px;" class="cols3">
       <div class="card"><div class="cardInner">
-        <div class="cardTitle"><h3>Mobile Computer Repair</h3><span class="badge">We come to you</span></div>
+        <div class="cardTitle">
+          <h3>Mobile Computer Repair</h3>
+          <span class="badge">We come to you</span>
+        </div>
         <p class="small" style="margin-top:10px;">On-site troubleshooting, installs, setup, and upgrades.</p>
       </div></div>
 
       <div class="card"><div class="cardInner">
-        <div class="cardTitle"><h3>Virtual Computer Repair</h3><span class="badge">Zoom / phone</span></div>
+        <div class="cardTitle">
+          <h3>Virtual Computer Repair</h3>
+          <span class="badge">Zoom / phone</span>
+        </div>
         <p class="small" style="margin-top:10px;">Remote assistance for software issues, guidance, and quick fixes.</p>
       </div></div>
 
       <div class="card"><div class="cardInner">
-        <div class="cardTitle"><h3>Hardware & Software Repair</h3><span class="badge">Diagnostics</span></div>
+        <div class="cardTitle">
+          <h3>Hardware & Software Repair</h3>
+          <span class="badge">Diagnostics</span>
+        </div>
         <p class="small" style="margin-top:10px;">Performance issues, malware cleanup, parts replacements, and more.</p>
       </div></div>
     </div>
@@ -92,8 +102,15 @@
       </div>
     </div>
 
-    <!-- CTA stays on the normal page background (no full-width bar) -->
-    <div style="margin-top:22px;" class="cta">
+    <!-- Natural end spacing before the footer surface begins -->
+    <div style="height: 28px;"></div>
+  </div>
+</main>
+
+<!-- Footer Surface: keeps CTA and Footer on ONE continuous grey background -->
+<section class="footerSurface">
+  <div class="container" style="padding-top: 28px;">
+    <div class="cta">
       <div>
         <h3>Ready to get help?</h3>
         <div class="small">Call us or send a message and we’ll get you taken care of.</div>
@@ -103,33 +120,32 @@
         <a class="btn btnPrimary" href="../contact/">Contact</a>
       </div>
     </div>
-
-    <!-- Extra breathing room so the footer never feels glued to the CTA -->
-    <div style="height: 38px;"></div>
   </div>
-</main>
 
-<footer style="border-top: 1px solid rgba(52,54,61,0.7);">
-  <div class="container footerGrid">
-    <div>
-      <div class="footerTitle">Phoenix Technology Solutions</div>
-      <div class="small">Mobile & virtual computer repair in Florida. Software built with long-term support.</div>
+  <footer class="footerInner">
+    <div class="container footerGrid">
+      <div>
+        <div class="footerTitle">Phoenix Technology Solutions</div>
+        <div class="small">Mobile & virtual computer repair in Florida. Software built with long-term support.</div>
+      </div>
+
+      <div class="footerLinks">
+        <div class="footerTitle">Pages</div>
+        <a href="../">Home</a>
+        <a href="../services/">Services</a>
+        <a href="../shop/">Shop</a>
+        <a href="../about/">About</a>
+        <a href="../contact/">Contact</a>
+      </div>
+
+      <div class="footerLinks">
+        <div class="footerTitle">Contact</div>
+        <a href="tel:18633202101" class="small">(863) 320-2101</a>
+        <span class="small">Florida</span>
+      </div>
     </div>
-    <div class="footerLinks">
-      <div class="footerTitle">Pages</div>
-      <a href="../">Home</a>
-      <a href="../services/">Services</a>
-      <a href="../shop/">Shop</a>
-      <a href="../about/">About</a>
-      <a href="../contact/">Contact</a>
-    </div>
-    <div class="footerLinks">
-      <div class="footerTitle">Contact</div>
-      <a href="tel:18633202101" class="small">(863) 320-2101</a>
-      <span class="small">Florida</span>
-    </div>
-  </div>
-</footer>
+  </footer>
+</section>
 
 <script src="../assets/js/main.js"></script>
 </body>

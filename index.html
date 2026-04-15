@@ -6,14 +6,12 @@
   <title>Phoenix Technology Solutions</title>
 
   <link rel="icon" href="./assets/img/favicon.png" type="image/png" />
-  <link rel="apple-touch-icon" href="./assets/img/favicon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      /* Phoenix Theme 2 Core Palette */
       --bg-grey: #1E1F24;
       --card-grey: #25262C;
       --card-grey-dark: #202126;
@@ -24,25 +22,32 @@
       --accent-strong: #7C3AED;
     }
 
+    /* Smooth Scrolling & Base */
+    html { scroll-behavior: smooth; }
     body {
       background-color: var(--bg-grey);
       color: var(--text-primary);
       font-family: 'Inter', sans-serif;
       margin: 0;
-      line-height: 1.5;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
     }
 
     .container {
-      max-width: 1100px;
+      max-width: 1000px;
       margin: 0 auto;
-      padding: 0 24px;
+      padding: 0 32px;
     }
 
-    /* --- Header & Navigation --- */
+    /* --- Navigation: Sleek & Sticky --- */
     .header {
-      background-color: var(--bg-grey);
+      background-color: rgba(30, 31, 36, 0.8);
+      backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--stroke);
-      padding: 1rem 0;
+      padding: 1.2rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
     .headerRow {
@@ -54,38 +59,41 @@
     .brand {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 14px;
       text-decoration: none;
       color: var(--text-primary);
       font-weight: 700;
+      letter-spacing: -0.02em;
     }
 
     .brandLogo {
-      width: 32px;
-      height: 32px;
-      border-radius: 4px;
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      border: 1px solid var(--stroke);
     }
 
     .nav a {
       color: var(--text-secondary);
       text-decoration: none;
-      margin-right: 20px;
-      font-size: 0.9rem;
+      margin-right: 24px;
+      font-size: 0.85rem;
       font-weight: 500;
-      transition: color 0.2s;
+      transition: all 0.2s ease;
     }
 
-    .nav a:hover { color: var(--text-primary); }
+    .nav a:hover { color: var(--accent); }
 
-    /* --- Buttons --- */
+    /* --- Buttons: Tactile & High Contrast --- */
     .btn {
-      display: inline-block;
-      padding: 10px 20px;
-      border-radius: 6px;
+      display: inline-flex;
+      align-items: center;
+      padding: 12px 24px;
+      border-radius: 8px;
       text-decoration: none;
       font-weight: 600;
-      font-size: 0.9rem;
-      transition: all 0.2s;
+      font-size: 0.85rem;
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
       border: 1px solid var(--stroke);
       color: var(--text-primary);
       background: var(--card-grey);
@@ -93,107 +101,144 @@
 
     .btnPrimary {
       background-color: var(--accent);
-      color: #111;
+      color: #000;
       border: none;
+      box-shadow: 0 4px 14px rgba(167, 139, 250, 0.2);
     }
 
     .btnPrimary:hover {
       background-color: var(--accent-strong);
-      color: white;
+      color: #fff;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(124, 58, 237, 0.3);
     }
 
     .btnGhost {
-      background: transparent;
-      border: 1px solid var(--stroke);
+      background: rgba(255,255,255,0.03);
     }
 
     .btnGhost:hover {
       background: var(--card-grey-dark);
+      border-color: var(--text-secondary);
     }
 
-    /* --- Hero Section --- */
+    /* --- Hero: Focused & High Depth --- */
     .hero {
-      padding: 80px 0;
-      background: radial-gradient(circle at top, #25262c 0%, #1e1f24 100%);
+      padding: 120px 0 100px;
+      background: radial-gradient(circle at 50% -20%, #2d2e35 0%, #1e1f24 70%);
     }
 
     h1 {
       font-weight: 800;
-      font-size: 2.2rem;
+      font-size: clamp(2rem, 5vw, 3rem);
       color: var(--text-primary);
+      letter-spacing: -0.04em;
+      line-height: 1.1;
+      margin-bottom: 16px;
     }
 
-    .small {
+    .hero-subtitle {
       color: var(--text-secondary);
-      font-size: 0.95rem;
+      font-size: 1.15rem;
+      max-width: 500px;
+      margin: 0 auto 40px;
     }
 
-    /* Service Chips/List Items */
-    .li {
+    /* Service List: Horizontal Matrix */
+    .service-row {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      margin-top: 48px;
+      overflow-x: auto;
+      padding: 4px 0 20px;
+      scrollbar-width: none; /* Firefox */
+    }
+    .service-row::-webkit-scrollbar { display: none; } /* Safari/Chrome */
+
+    .li-badge {
       background-color: var(--card-grey);
       border: 1px solid var(--stroke);
-      padding: 8px 16px;
-      border-radius: 6px;
+      padding: 10px 18px;
+      border-radius: 50px;
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
+      transition: border-color 0.3s ease;
     }
 
-    .check {
-      width: 6px;
-      height: 6px;
+    .li-badge:hover { border-color: var(--accent); }
+
+    .dot-accent {
+      width: 8px;
+      height: 8px;
       background-color: var(--accent);
       border-radius: 50%;
+      box-shadow: 0 0 8px var(--accent);
     }
 
-    /* --- Shop CTA Section --- */
-    .cta {
+    /* --- Shop CTA: The "Ghost" Container --- */
+    .shop-section { padding: 40px 0 100px; }
+    
+    .cta-panel {
       background-color: var(--card-grey-dark);
-      border: 1px dashed var(--stroke);
-      padding: 40px;
-      border-radius: 12px;
+      border: 1px solid var(--stroke);
+      padding: 48px;
+      border-radius: 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 20px;
+      gap: 32px;
+      position: relative;
+      overflow: hidden;
     }
 
-    /* --- Footer --- */
+    .cta-panel::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: linear-gradient(45deg, transparent, rgba(167, 139, 250, 0.03));
+      pointer-events: none;
+    }
+
+    /* --- Footer: Structured & Dimmed --- */
     footer {
       border-top: 1px solid var(--stroke);
-      padding: 60px 0;
-      margin-top: 40px;
+      padding: 80px 0 40px;
+      background: #1a1b20;
     }
 
     .footerGrid {
       display: grid;
       grid-template-columns: 2fr 1fr 1fr;
-      gap: 40px;
+      gap: 60px;
     }
 
     .footerTitle {
       font-weight: 700;
       color: var(--text-primary);
-      margin-bottom: 16px;
+      margin-bottom: 20px;
       text-transform: uppercase;
-      font-size: 0.8rem;
-      letter-spacing: 0.05em;
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
     }
 
     .footerLinks a {
       display: block;
       color: var(--text-secondary);
       text-decoration: none;
-      margin-bottom: 8px;
+      margin-bottom: 12px;
       font-size: 0.9rem;
+      transition: color 0.2s;
     }
 
     .footerLinks a:hover { color: var(--accent); }
 
-    @media (max-width: 768px) {
-      .headerRow, .cta, .footerGrid { flex-direction: column; text-align: center; }
-      .nav { margin: 20px 0; }
-      .footerGrid { grid-template-columns: 1fr; }
+    @media (max-width: 850px) {
+      .headerRow, .cta-panel, .footerGrid { flex-direction: column; text-align: center; }
+      .actions { margin-top: 20px; }
+      .nav { display: none; }
+      .footerGrid { grid-template-columns: 1fr; gap: 40px; }
     }
   </style>
 </head>
@@ -206,7 +251,7 @@
       <div>PHOENIX TECH</div>
     </a>
 
-    <nav class="nav" aria-label="Primary navigation">
+    <nav class="nav">
       <a href="./">Home</a>
       <a href="./services/">Services</a>
       <a href="./shop/">Shop</a>
@@ -215,8 +260,7 @@
     </nav>
 
     <div class="actions">
-      <a class="btn btnGhost" href="./contact/">Get Quote</a>
-      <a class="btn btnPrimary" href="./shop/">Shop</a>
+      <a class="btn btnPrimary" href="./contact/">Get Quote</a>
     </div>
   </div>
 </header>
@@ -224,85 +268,53 @@
 <main>
   <section class="hero">
     <div class="container" style="text-align:center;">
-      <img
-        src="./assets/img/logo.png"
-        alt="Phoenix Tech Solutions logo"
-        style="
-          width: 140px;
-          height: 140px;
-          border-radius: 999px;
-          object-fit: cover;
-          border: 1px solid var(--stroke);
-          background: var(--card-grey-dark);
-          box-shadow: 0 16px 40px rgba(0,0,0,0.4);
-        "
-      />
-
-      <h1 style="margin-top:24px; letter-spacing:-0.03em;">
-        WELCOME TO PHOENIX TECH SOLUTIONS
-      </h1>
-
-      <div class="small" style="margin-top:10px;">
-        Reliable tech support that comes to you.
+      <div style="position: relative; display: inline-block;">
+        <img
+          src="./assets/img/logo.png"
+          alt="Phoenix Tech Solutions logo"
+          style="
+            width: 130px;
+            height: 130px;
+            border-radius: 999px;
+            border: 2px solid var(--stroke);
+            padding: 5px;
+            background: var(--bg-grey);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+          "
+        />
       </div>
 
-      <div
-        style="
-          margin-top:32px;
-          display:flex;
-          gap:12px;
-          justify-content:center;
-          flex-wrap:nowrap;
-          overflow-x:auto;
-          padding-bottom: 12px;
-        "
-      >
-        <div class="li" style="flex:0 0 auto; white-space:nowrap;">
-          <span class="check"></span>
-          <div><strong>Mobile Repair</strong></div>
-        </div>
+      <h1 style="margin-top:40px;">WELCOME TO<br>PHOENIX TECH SOLUTIONS</h1>
+      <p class="hero-subtitle">Reliable tech support that comes to you.</p>
 
-        <div class="li" style="flex:0 0 auto; white-space:nowrap;">
-          <span class="check"></span>
-          <div><strong>Virtual Repair</strong></div>
-        </div>
-
-        <div class="li" style="flex:0 0 auto; white-space:nowrap;">
-          <span class="check"></span>
-          <div><strong>Hardware & Software</strong></div>
-        </div>
-
-        <div class="li" style="flex:0 0 auto; white-space:nowrap;">
-          <span class="check"></span>
-          <div><strong>System Changeover</strong></div>
-        </div>
-
-        <div class="li" style="flex:0 0 auto; white-space:nowrap;">
-          <span class="check"></span>
-          <div><strong>Lifetime Guarantee</strong></div>
-        </div>
+      <div class="service-row">
+        <div class="li-badge"><div class="dot-accent"></div><strong>Mobile Repair</strong></div>
+        <div class="li-badge"><div class="dot-accent"></div><strong>Virtual Repair</strong></div>
+        <div class="li-badge"><div class="dot-accent"></div><strong>Hardware & Software</strong></div>
+        <div class="li-badge"><div class="dot-accent"></div><strong>System Changeover</strong></div>
+        <div class="li-badge"><div class="dot-accent"></div><strong>Lifetime Guarantee</strong></div>
       </div>
 
-      <div style="margin-top:24px; display:flex; gap:12px; flex-wrap:wrap; justify-content:center;">
+      <div style="margin-top:48px; display:flex; gap:16px; flex-wrap:wrap; justify-content:center;">
         <a class="btn btnPrimary" href="./contact/">Request a Quote</a>
-        <a class="btn" href="./services/">View Services</a>
+        <a class="btn btnGhost" href="./services/">View Services</a>
         <a class="btn btnGhost" href="tel:18633202101">Call (863) 320-2101</a>
       </div>
     </div>
   </section>
 
-  <section class="section" style="padding: 40px 0 80px;">
+  <section class="shop-section">
     <div class="container">
-      <div class="cta">
+      <div class="cta-panel">
         <div style="text-align: left;">
-          <h3 style="color: var(--text-primary);">Interested in new software? Check out our shop.</h3>
-          <div class="small" style="margin-top:6px;">
-            Browse our Phoenix products — more releases coming soon.
-          </div>
+          <h3 style="font-size: 1.4rem; margin: 0;">Interested in new software?</h3>
+          <p class="small" style="margin-top:8px; max-width: 400px;">
+            Browse our Phoenix products — professional tools and releases coming soon.
+          </p>
         </div>
-        <div style="display:flex; gap:10px; flex-wrap:wrap;">
+        <div style="display:flex; gap:12px;">
           <a class="btn btnGhost" href="./services/">Services</a>
-          <a class="btn btnPrimary" href="./shop/">Shop Now</a>
+          <a class="btn btnPrimary" href="./shop/">Visit Shop</a>
         </div>
       </div>
     </div>
@@ -313,20 +325,19 @@
   <div class="container footerGrid">
     <div>
       <div class="footerTitle">Phoenix Technology Solutions</div>
-      <div class="small">Serving with Integrity, working with Excellence</div>
+      <p class="small">Serving with Integrity, working with Excellence.</p>
     </div>
     <div class="footerLinks">
       <div class="footerTitle">Company</div>
-      <a href="./">Home</a>
-      <a href="./services/">Services</a>
-      <a href="./shop/">Shop</a>
-      <a href="./about/">About</a>
+      <a href="./services/">Our Services</a>
+      <a href="./shop/">Phoenix Shop</a>
+      <a href="./about/">About Us</a>
       <a href="./contact/">Contact</a>
     </div>
     <div class="footerLinks">
-      <div class="footerTitle">Support</div>
-      <a href="tel:18633202101" class="small">(863) 320-2101</a>
-      <span class="small" style="display:block; margin-top:12px;">©2026 Phoenix Tech</span>
+      <div class="footerTitle">Get in Touch</div>
+      <a href="tel:18633202101">(863) 320-2101</a>
+      <span class="small" style="margin-top: 12px; display: block; opacity: 0.6;">© 2026 Phoenix Tech</span>
     </div>
   </div>
 </footer>

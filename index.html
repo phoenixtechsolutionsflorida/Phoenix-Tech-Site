@@ -3,13 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phoenix Tech Solutions | Serving with Integrity</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Phoenix Tech Solutions | System Mastery</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            /* Phoenix Theme 2 Core Palette */
             --bg-grey: #1E1F24;
             --card-grey: #25262C;
             --card-grey-dark: #202126;
@@ -20,192 +17,172 @@
             --accent-strong: #7C3AED;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             background-color: var(--bg-grey);
             color: var(--text-primary);
-            font-family: 'Inter', -apple-system, sans-serif;
-            line-height: 1.5;
-            -webkit-font-smoothing: antialiased;
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
         }
 
         /* --- Navigation --- */
         nav {
+            padding: 24px 6%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1.25rem 8%;
-            background-color: var(--bg-grey);
             border-bottom: 1px solid var(--stroke);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
         }
 
         .logo {
             font-weight: 700;
-            font-size: 1.1rem;
+            font-size: 0.9rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
             color: var(--text-primary);
-            text-decoration: none;
-            letter-spacing: -0.02em;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
         }
 
         .nav-links a {
-            text-decoration: none;
             color: var(--text-secondary);
-            font-size: 0.9rem;
+            text-decoration: none;
+            margin-left: 32px;
+            font-size: 0.85rem;
             font-weight: 500;
-            transition: color 0.2s ease;
         }
 
-        .nav-links a:hover {
-            color: var(--text-primary);
+        /* --- Side-Split Hero --- */
+        .hero {
+            display: flex;
+            min-height: 70vh;
+            align-items: center;
+            padding: 0 6%;
+            border-bottom: 1px solid var(--stroke);
         }
 
-        /* --- Hero Section --- */
-        header {
-            padding: 120px 8% 80px;
-            max-width: 1200px;
+        .hero-content {
+            flex: 1;
+            padding-right: 40px;
+        }
+
+        .hero-visual {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-left: 1px solid var(--stroke);
+            height: 100%;
+            padding: 80px 0;
         }
 
         h1 {
-            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-size: 3.5rem;
             font-weight: 700;
-            letter-spacing: -0.03em;
-            margin-bottom: 1.5rem;
-            line-height: 1.1;
+            line-height: 1;
+            margin-bottom: 24px;
+            letter-spacing: -0.04em;
         }
 
-        header p {
+        .hero p {
             color: var(--text-secondary);
             font-size: 1.1rem;
-            max-width: 550px;
-            margin-bottom: 2.5rem;
+            max-width: 480px;
+            margin-bottom: 40px;
         }
 
-        /* --- Buttons --- */
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            padding: 0.75rem 1.5rem;
-            border-radius: 6px;
-            font-weight: 600;
+        /* --- Service Matrix --- */
+        .matrix {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            border-bottom: 1px solid var(--stroke);
+        }
+
+        .matrix-item {
+            padding: 60px 10%;
+            border-right: 1px solid var(--stroke);
+            transition: background 0.2s ease;
+        }
+
+        .matrix-item:nth-child(even) { border-right: none; }
+
+        .matrix-item:hover {
+            background-color: var(--card-grey-dark);
+        }
+
+        .matrix-item h3 {
+            font-size: 1.25rem;
+            margin-bottom: 16px;
+        }
+
+        .matrix-item p {
+            color: var(--text-secondary);
             font-size: 0.95rem;
-            text-decoration: none;
-            transition: all 0.2s ease;
-            cursor: pointer;
+            margin-bottom: 24px;
         }
 
-        .btn-accent {
+        /* --- The Purposive Accent --- */
+        .btn-cta {
+            display: inline-block;
             background-color: var(--accent);
-            color: #111111; /* Contrast against purple */
+            color: #111;
+            padding: 14px 28px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            transition: all 0.2s ease;
         }
 
-        .btn-accent:hover {
+        .btn-cta:hover {
             background-color: var(--accent-strong);
             color: white;
-            box-shadow: 0 0 15px rgba(167, 139, 250, 0.2);
+            box-shadow: 0 0 20px rgba(167, 139, 250, 0.3);
         }
 
-        .btn-secondary {
-            background-color: var(--card-grey);
-            color: var(--text-primary);
-            border: 1px solid var(--stroke);
-            margin-left: 1rem;
-        }
-
-        .btn-secondary:hover {
-            background-color: var(--card-grey-dark);
-            border-color: var(--text-secondary);
-        }
-
-        /* --- Grid Section --- */
-        .content-section {
-            padding: 60px 8% 100px;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .card {
-            background-color: var(--card-grey);
-            border: 1px solid var(--stroke);
-            padding: 2rem;
-            border-radius: 8px;
-            transition: border-color 0.2s ease;
-        }
-
-        .card:hover {
-            border-color: var(--accent);
-        }
-
-        .card h3 {
-            font-size: 1.1rem;
-            margin-bottom: 0.75rem;
+        .link-accent {
+            color: var(--accent);
+            text-decoration: none;
             font-weight: 600;
+            font-size: 0.9rem;
         }
 
-        .card p {
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-        }
-
-        .ghost-panel {
-            background-color: var(--card-grey-dark);
-            border: 1px dashed var(--stroke);
-            padding: 1.5rem;
-            border-radius: 8px;
-            margin-top: 3rem;
-            text-align: center;
-        }
-
-        /* --- Footer --- */
+        /* --- Footer Details --- */
         footer {
-            padding: 80px 8% 40px;
-            border-top: 1px solid var(--stroke);
-            background-color: var(--bg-grey);
-        }
-
-        .footer-text {
-            color: var(--text-secondary);
-            font-size: 0.85rem;
+            padding: 60px 6%;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
-        .tagline {
-            color: var(--text-primary);
-            font-weight: 600;
-            font-size: 0.9rem;
+        .status-indicator {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.8rem;
+            color: var(--text-secondary);
         }
 
-        @media (max-width: 768px) {
-            nav { flex-direction: column; gap: 1rem; text-align: center; }
-            header { text-align: center; padding-top: 60px; }
-            header p { margin-left: auto; margin-right: auto; }
-            .btn-secondary { margin-left: 0; margin-top: 1rem; display: block; }
-            .btn-accent { display: block; }
+        .dot {
+            width: 8px;
+            height: 8px;
+            background-color: var(--accent);
+            border-radius: 50%;
+            box-shadow: 0 0 8px var(--accent);
+        }
+
+        @media (max-width: 900px) {
+            .hero { flex-direction: column; padding: 60px 6%; text-align: center; }
+            .hero-visual { border-left: none; border-top: 1px solid var(--stroke); width: 100%; margin-top: 40px; }
+            .matrix { grid-template-columns: 1fr; }
+            .matrix-item { border-right: none; border-bottom: 1px solid var(--stroke); }
         }
     </style>
 </head>
 <body>
 
     <nav>
-        <a href="./" class="logo">PHOENIX TECH SOLUTIONS</a>
+        <div class="logo">PHOENIX TECH</div>
         <div class="nav-links">
             <a href="./">Home</a>
             <a href="./services/">Services</a>
@@ -214,49 +191,49 @@
         </div>
     </nav>
 
-    <header>
-        <h1>Serving with Integrity. <br>Working with Excellence.</h1>
-        <p>Professional tech support, system migrations, and mobile hardware repair built on reliable infrastructure and clear communication.</p>
-        <div class="actions">
-            <a href="./contact/" class="btn btn-accent">Request Quote</a>
-            <a href="tel:18633202101" class="btn btn-secondary">Call Support</a>
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Elite Support. <br>Local Integrity.</h1>
+            <p>On-site hardware recovery and advanced system deployments for the Lakeland area.</p>
+            <a href="./contact/" class="btn-cta">Request Support</a>
+        </div>
+        <div class="hero-visual">
+            <div class="status-indicator">
+                <div class="dot"></div>
+                SYSTEMS OPERATIONAL / 2026
+            </div>
         </div>
     </header>
 
-    <section class="content-section">
-        <div class="grid">
-            <div class="card">
-                <h3>Mobile Repair</h3>
-                <p>On-site hardware troubleshooting and diagnostics. We bring the repair lab to your location.</p>
-            </div>
-            <div class="card">
-                <h3>Virtual Repair</h3>
-                <p>Remote software support and system optimization for immediate resolution, regardless of distance.</p>
-            </div>
-            <div class="card">
-                <h3>System Changeover</h3>
-                <p>Seamlessly migrate data and infrastructure from legacy systems to modern, high-performance hardware.</p>
-            </div>
-            <div class="card">
-                <h3>Lifetime Guarantee</h3>
-                <p>We stand by our workmanship. If a repair fails due to our service, we fix it at no cost to you.</p>
-            </div>
+    <section class="matrix">
+        <div class="matrix-item">
+            <h3>Mobile Repair</h3>
+            <p>Direct intervention for hardware failure. We bring professional-grade tools to your workspace.</p>
+            <a href="./services/" class="link-accent">Read Specs &rarr;</a>
         </div>
-
-        <div class="ghost-panel">
-            <p style="color: var(--text-secondary);">Interested in new software? <a href="./shop/" style="color: var(--accent); text-decoration: none; font-weight: 600;">Check out our shop &rarr;</a></p>
+        <div class="matrix-item">
+            <h3>Virtual Systems</h3>
+            <p>Encrypted remote troubleshooting for software architecture and workflow optimization.</p>
+            <a href="./services/" class="link-accent">Learn More &rarr;</a>
+        </div>
+        <div class="matrix-item">
+            <h3>Migration</h3>
+            <p>System changeovers managed with zero-loss data protocols and verified integrity.</p>
+            <a href="./services/" class="link-accent">View Process &rarr;</a>
+        </div>
+        <div class="matrix-item">
+            <h3>Guarantee</h3>
+            <p>Lifetime craftsmanship warranty on all hardware repairs. Built to last.</p>
+            <a href="./about/" class="link-accent">Our Promise &rarr;</a>
         </div>
     </section>
 
     <footer>
-        <div class="footer-text">
-            <div>
-                <span class="tagline">PHOENIX TECH SOLUTIONS</span>
-                <p style="margin-top: 5px;">(863) 320-2101</p>
-            </div>
-            <div>
-                &copy; 2026. All rights reserved.
-            </div>
+        <div class="status-indicator">
+            (863) 320-2101 / Serving Lakeland, FL
+        </div>
+        <div style="font-size: 0.8rem; color: var(--text-secondary);">
+            &copy; 2026 Phoenix Technology Solutions
         </div>
     </footer>
 

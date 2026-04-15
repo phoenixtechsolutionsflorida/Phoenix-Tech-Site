@@ -13,6 +13,7 @@
 
   <style>
     :root {
+      /* Phoenix Theme 2 Specs */
       --bg-grey: #1E1F24;
       --card-grey: #25262C;
       --card-grey-dark: #202126;
@@ -29,30 +30,87 @@
       font-family: 'Inter', sans-serif;
       margin: 0;
       line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
     }
 
-    .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
 
-    /* --- Navigation (Original Structure) --- */
-    .header { background-color: var(--bg-grey); border-bottom: 1px solid var(--stroke); padding: 1rem 0; }
-    .headerRow { display: flex; justify-content: space-between; align-items: center; }
-    .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: white; font-weight: 700; }
-    .brand img { width: 32px; height: 32px; border-radius: 4px; }
-    .nav a { color: var(--text-secondary); text-decoration: none; margin-left: 20px; font-size: 0.9rem; transition: 0.2s; }
+    /* --- Navigation --- */
+    .header {
+      background-color: var(--bg-grey);
+      border-bottom: 1px solid var(--stroke);
+      padding: 1rem 0;
+    }
+
+    .headerRow {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text-primary);
+      font-weight: 700;
+    }
+
+    .brand img {
+      width: 32px;
+      height: 32px;
+      border-radius: 4px;
+      border: 1px solid var(--stroke);
+    }
+
+    .nav a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
     .nav a:hover { color: var(--accent); }
 
     /* --- Content Sections --- */
-    .section { padding: 60px 0; }
-    .kicker { display: flex; align-items: center; gap: 8px; color: var(--accent); font-size: 0.8rem; font-weight: 700; text-transform: uppercase; margin-bottom: 12px; }
-    .dot { width: 8px; height: 8px; background: var(--accent); border-radius: 50%; }
+    .section { padding: 80px 0; }
+    
+    .kicker {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--accent);
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      margin-bottom: 12px;
+    }
 
-    h1 { font-size: 2.5rem; font-weight: 800; margin: 0; }
+    .dot { width: 8px; height: 8px; background: var(--accent); border-radius: 50%; box-shadow: 0 0 8px var(--accent); }
+
+    h1 { font-size: 2.5rem; font-weight: 800; letter-spacing: -0.04em; margin: 0 0 10px; }
+    
     .small { color: var(--text-secondary); font-size: 0.9rem; }
 
     /* --- Grid & Cards --- */
-    .grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 24px; margin-top: 24px; }
-    .card { background: var(--card-grey); border: 1px solid var(--stroke); border-radius: 8px; padding: 32px; }
-    .cardInner h2 { font-size: 1.5rem; margin-bottom: 8px; }
+    .grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 24px; margin-top: 40px; }
+
+    .card {
+      background-color: var(--card-grey);
+      border: 1px solid var(--stroke);
+      border-radius: 12px;
+      padding: 32px;
+    }
+
+    .cardInner h2 { font-size: 1.5rem; margin-bottom: 8px; font-weight: 700; }
 
     /* --- Form Elements --- */
     .input, textarea {
@@ -60,23 +118,60 @@
       background: var(--card-grey-dark);
       border: 1px solid var(--stroke);
       color: white;
-      padding: 12px;
+      padding: 14px;
       border-radius: 6px;
-      margin-top: 10px;
+      margin-bottom: 16px;
       font-family: inherit;
+      font-size: 0.95rem;
+      transition: border-color 0.2s;
     }
-    textarea { min-height: 100px; }
+
+    .input:focus, textarea:focus {
+      outline: none;
+      border-color: var(--accent);
+    }
+
+    textarea { min-height: 120px; resize: vertical; }
 
     /* --- Buttons --- */
-    .btn { display: inline-block; padding: 10px 20px; border-radius: 6px; text-decoration: none; font-weight: 700; border: none; cursor: pointer; transition: 0.2s; }
-    .btnPrimary { background: var(--accent); color: #111; margin-top: 15px; }
-    .btnPrimary:hover { background: var(--accent-strong); color: white; }
-    .btnGhost { background: transparent; border: 1px solid var(--stroke); color: white; }
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.9rem;
+      transition: all 0.2s;
+      cursor: pointer;
+      border: none;
+      text-align: center;
+    }
+
+    .btnPrimary {
+      background-color: var(--accent);
+      color: #111;
+    }
+
+    .btnPrimary:hover {
+      background-color: var(--accent-strong);
+      color: white;
+    }
+
+    .btnGhost {
+      background: transparent;
+      border: 1px solid var(--stroke);
+      color: var(--text-primary);
+    }
+
+    .btnGhost:hover {
+      background: var(--card-grey-dark);
+    }
 
     /* --- Footer --- */
-    footer { border-top: 1px solid var(--stroke); padding: 40px 0; background: rgba(30,31,36,0.92); }
-    .footerGrid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 20px; }
-    .footerTitle { font-weight: 700; margin-bottom: 10px; }
+    footer { border-top: 1px solid var(--stroke); padding: 60px 0; background: #1a1b20; }
+    .footerGrid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; }
+    .footerTitle { font-weight: 700; margin-bottom: 12px; font-size: 0.8rem; letter-spacing: 0.05em; color: var(--text-primary); }
+    .footerLinks a { display: block; color: var(--text-secondary); text-decoration: none; margin-bottom: 8px; font-size: 0.9rem; }
 
     @media (max-width: 768px) {
       .grid { grid-template-columns: 1fr; }
@@ -92,8 +187,9 @@
   <div class="container headerRow">
     <a class="brand" href="../">
       <img src="../assets/img/logo.png" alt="Logo" />
-      <div>Phoenix Technology Solutions</div>
+      <div>PHOENIX TECH</div>
     </a>
+
     <nav class="nav">
       <a href="../">Home</a>
       <a href="../services/">Services</a>
@@ -101,7 +197,11 @@
       <a href="../about/">About</a>
       <a href="../contact/">Contact</a>
     </nav>
-  </nav>
+
+    <div class="actions">
+      <a class="btn btnPrimary" href="../shop/">Shop</a>
+    </div>
+  </div>
 </header>
 
 <main class="section">
@@ -118,31 +218,32 @@
           <h2>Send a message</h2>
           <p class="small">Tell us what you need and your preferred timeline.</p>
 
-          <form action="https://formspree.io/f/xyklkban" method="POST" class="form" style="margin-top:12px;">
+          <form id="contact-form" style="margin-top:24px;">
             <input class="input" type="text" name="name" placeholder="Your name" required />
             <input class="input" type="email" name="email" placeholder="Email" required />
             <input class="input" type="text" name="city" placeholder="City (optional)" />
             <textarea name="message" placeholder="What can we help with?" required></textarea>
 
-            <button class="btn btnPrimary" type="submit">Send Message</button>
+            <button id="submit-btn" class="btn btnPrimary" type="submit" style="width: 100%;">Send Message</button>
+            <div id="form-status" style="margin-top: 20px; font-size: 0.95rem; font-weight: 600; display: none;"></div>
           </form>
         </div>
       </div>
 
-      <div class="card" style="grid-column:8/span 5;">
+      <div class="card" style="grid-column:8/span 5; background-color: var(--card-grey-dark);">
         <div class="cardInner">
-          <div style="display:flex; justify-content:space-between; align-items:center;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 16px;">
             <h2>Business info</h2>
-            <span style="background:var(--accent); color:#111; padding:2px 8px; border-radius:4px; font-size:0.7rem; font-weight:700;">FLORIDA</span>
+            <span style="background:var(--accent); color:#111; padding:2px 8px; border-radius:4px; font-size:0.7rem; font-weight:700; text-transform: uppercase;">Florida</span>
           </div>
-          <hr style="border:0; border-top:1px solid var(--stroke); margin:15px 0;" />
-          <div class="small">
-            <strong>Phone:</strong> <a href="tel:18633202101" style="color:var(--accent); text-decoration:none;">(863) 320-2101</a><br/>
-            <strong>Hours:</strong> Mon–Fri 9am–5pm<br/>
-            <strong>Service:</strong> Mobile & virtual support
+          <hr style="border:0; border-top:1px solid var(--stroke); margin:20px 0;" />
+          <div class="small" style="line-height: 2;">
+            <strong style="color: white;">Phone:</strong> <a href="tel:18633202101" style="color:var(--accent); text-decoration:none;">(863) 320-2101</a><br/>
+            <strong style="color: white;">Hours:</strong> Mon–Fri 9am–5pm<br/>
+            <strong style="color: white;">Service:</strong> Mobile & virtual support
           </div>
 
-          <div style="margin-top:20px; display:flex; gap:10px; flex-wrap:wrap;">
+          <div style="margin-top:32px; display:grid; gap:12px;">
             <a class="btn btnPrimary" href="tel:18633202101">Call Now</a>
             <a class="btn btnGhost" href="../shop/">Browse Shop</a>
           </div>
@@ -159,18 +260,62 @@
       <div class="small">Mobile & virtual computer repair in Florida. Software built with long-term support.</div>
     </div>
     <div class="footerLinks">
-      <div class="footerTitle">Pages</div>
+      <div class="footerTitle">Links</div>
       <a href="../">Home</a>
       <a href="../services/">Services</a>
       <a href="../shop/">Shop</a>
     </div>
     <div class="footerLinks">
       <div class="footerTitle">Contact</div>
-      <a href="tel:18633202101" class="small">(863) 320-2101</a>
-      <span class="small" style="display:block; margin-top:5px;">©2026 Phoenix Tech</span>
+      <a href="tel:18633202101">(863) 320-2101</a>
+      <span class="small" style="display:block; margin-top:12px; opacity: 0.5;">©2026 Phoenix Tech</span>
     </div>
   </div>
 </footer>
+
+<script>
+  const form = document.getElementById("contact-form");
+  const status = document.getElementById("form-status");
+  const btn = document.getElementById("submit-btn");
+
+  form.addEventListener("submit", async function(event) {
+    event.preventDefault();
+    btn.disabled = true;
+    btn.innerText = "Sending...";
+    
+    const data = new FormData(event.target);
+    
+    fetch("https://formspree.io/f/xyklkban", {
+      method: "POST",
+      body: data,
+      headers: {
+        'Accept': 'application/json'
+      }
+    }).then(response => {
+      if (response.ok) {
+        status.style.display = "block";
+        status.style.color = "#A78BFA"; // Theme Purple
+        status.innerHTML = "Success! Your message has been sent.";
+        form.reset();
+        btn.innerText = "Message Sent";
+      } else {
+        response.json().then(data => {
+          status.style.display = "block";
+          status.style.color = "#ff4a4a";
+          status.innerHTML = "Oops! There was a problem submitting your form.";
+          btn.disabled = false;
+          btn.innerText = "Try Again";
+        });
+      }
+    }).catch(error => {
+      status.style.display = "block";
+      status.style.color = "#ff4a4a";
+      status.innerHTML = "Oops! Connection error.";
+      btn.disabled = false;
+      btn.innerText = "Try Again";
+    });
+  });
+</script>
 
 </body>
 </html>

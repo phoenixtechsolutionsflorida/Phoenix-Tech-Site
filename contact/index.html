@@ -236,150 +236,14 @@
       z-index: 1;
     }
 
-    .hero {
-      padding: 68px 0 34px;
+    .contactSection {
+      padding: 64px 0 78px;
     }
 
-    .heroCard {
-      position: relative;
-      overflow: hidden;
-      padding: 34px;
-      border: 1px solid var(--stroke);
-      border-radius: 30px;
-      background:
-        linear-gradient(180deg, rgba(37, 38, 44, 0.94), rgba(32, 33, 38, 0.96)),
-        linear-gradient(135deg, rgba(167, 139, 250, 0.08), transparent 50%);
-      box-shadow: var(--shadow-lg);
-    }
-
-    .heroCard::before {
-      content: "";
-      position: absolute;
-      inset: -1px auto auto -1px;
-      width: 240px;
-      height: 240px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(167,139,250,0.20) 0%, rgba(167,139,250,0.02) 55%, transparent 75%);
-      pointer-events: none;
-    }
-
-    .heroGrid {
-      position: relative;
-      display: grid;
-      grid-template-columns: minmax(0, 1.4fr) minmax(320px, 0.9fr);
-      gap: 26px;
-      align-items: stretch;
-    }
-
-    .eyebrow {
-      display: inline-flex;
+    .contactSectionSolo {
+      min-height: calc(100vh - 220px);
+      display: flex;
       align-items: center;
-      gap: 10px;
-      padding: 8px 12px;
-      border-radius: 999px;
-      border: 1px solid rgba(167, 139, 250, 0.18);
-      background: rgba(167, 139, 250, 0.08);
-      color: var(--accent);
-      font-size: 0.78rem;
-      font-weight: 800;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      margin-bottom: 18px;
-    }
-
-    .eyebrowDot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: var(--accent);
-      box-shadow: 0 0 16px rgba(167, 139, 250, 0.95);
-    }
-
-    h1 {
-      margin: 0;
-      font-size: clamp(2.4rem, 4vw, 4.3rem);
-      line-height: 0.98;
-      letter-spacing: -0.05em;
-    }
-
-    .heroLead {
-      max-width: 64ch;
-      margin: 18px 0 0;
-      color: var(--text-secondary);
-      font-size: 1.02rem;
-    }
-
-    .heroHighlights {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 14px;
-      margin-top: 28px;
-    }
-
-    .miniPanel {
-      padding: 16px 16px 15px;
-      border: 1px solid var(--stroke);
-      border-radius: 18px;
-      background: rgba(32, 33, 38, 0.7);
-      box-shadow: inset 0 1px 0 rgba(255,255,255,0.03);
-    }
-
-    .miniPanelLabel {
-      font-size: 0.72rem;
-      letter-spacing: 0.10em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      margin-bottom: 8px;
-      font-weight: 700;
-    }
-
-    .miniPanelValue {
-      font-size: 1rem;
-      color: var(--text-primary);
-      font-weight: 700;
-    }
-
-    .heroAside {
-      display: grid;
-      gap: 16px;
-      align-content: start;
-    }
-
-    .infoTile {
-      padding: 22px;
-      border-radius: 22px;
-      border: 1px solid var(--stroke);
-      background: linear-gradient(180deg, rgba(43, 45, 52, 0.92), rgba(32, 33, 38, 0.98));
-      box-shadow: var(--shadow-md);
-    }
-
-    .infoTileBadge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 6px 10px;
-      border-radius: 999px;
-      background: rgba(167, 139, 250, 0.10);
-      border: 1px solid rgba(167, 139, 250, 0.18);
-      color: var(--accent);
-      font-size: 0.72rem;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      font-weight: 800;
-      margin-bottom: 14px;
-    }
-
-    .infoTileTitle {
-      margin: 0 0 10px;
-      font-size: 1.18rem;
-      font-weight: 800;
-      letter-spacing: -0.03em;
-    }
-
-    .infoTileText {
-      margin: 0;
-      color: var(--text-secondary);
-      font-size: 0.97rem;
     }
 
     .contactSection {
@@ -608,40 +472,14 @@
       margin-top: 20px;
     }
 
-    .supportCard .cardText {
-      margin-top: 12px;
-    }
-
-    .supportGrid {
-      display: grid;
-      gap: 12px;
-      margin-top: 18px;
-    }
-
-    .supportRow {
-      display: flex;
-      justify-content: space-between;
-      gap: 14px;
-      align-items: center;
-      padding: 13px 14px;
-      border-radius: 16px;
-      border: 1px solid var(--stroke);
-      background: rgba(37, 38, 44, 0.78);
-    }
-
-    .supportRow span:first-child {
-      color: var(--text-secondary);
-      font-size: 0.94rem;
-    }
-
-    .supportRow span:last-child {
-      color: var(--text-primary);
-      font-size: 0.94rem;
-      font-weight: 700;
-      text-align: right;
-    }
-
     footer {
+      position: relative;
+      z-index: 1;
+      margin-top: 10px;
+      padding: 34px 0 46px;
+      border-top: 1px solid var(--stroke);
+      background: rgba(23, 24, 28, 0.94);
+    }
       position: relative;
       z-index: 1;
       margin-top: 10px;
@@ -688,13 +526,8 @@
     }
 
     @media (max-width: 1080px) {
-      .heroGrid,
       .contactGrid {
         grid-template-columns: 1fr;
-      }
-
-      .heroHighlights {
-        grid-template-columns: 1fr 1fr 1fr;
       }
     }
 
@@ -772,7 +605,7 @@
           </span>
           <span class="brandText">
             <span class="brandTitle">PHOENIX TECH</span>
-            <span class="brandSub">Since 2026</span>
+            <span class="brandSub">Technology Solutions</span>
           </span>
         </a>
 
@@ -792,57 +625,7 @@
     </header>
 
     <main>
-      <section class="hero">
-        <div class="container">
-          <div class="heroCard">
-            <div class="heroGrid">
-              <div>
-                <div class="eyebrow">
-                  <span class="eyebrowDot"></span>
-                  <span>Let’s Talk</span>
-                </div>
-                <h1>Built for Phoenix Theme 2.<br>Ready for real customer inquiries.</h1>
-                <p class="heroLead">
-                  Reach Phoenix Technology Solutions for mobile and virtual support, repair requests, software help, and service questions. This redesign keeps your existing contact workflow intact while bringing the page in line with the current Phoenix Theme 2 visual system.
-                </p>
-
-                <div class="heroHighlights">
-                  <div class="miniPanel">
-                    <div class="miniPanelLabel">Response</div>
-                    <div class="miniPanelValue">Usually within 1 business day</div>
-                  </div>
-                  <div class="miniPanel">
-                    <div class="miniPanelLabel">Support Type</div>
-                    <div class="miniPanelValue">Mobile & virtual service</div>
-                  </div>
-                  <div class="miniPanel">
-                    <div class="miniPanelLabel">Availability</div>
-                    <div class="miniPanelValue">Mon–Fri • 9am–5pm</div>
-                  </div>
-                </div>
-              </div>
-
-              <aside class="heroAside">
-                <div class="infoTile">
-                  <div class="infoTileBadge">Phoenix Standard</div>
-                  <h2 class="infoTileTitle">Cleaner hierarchy, stronger contrast, smoother cards.</h2>
-                  <p class="infoTileText">
-                    This version leans into the grey-first foundation, rounded Phoenix card style, purple accent glow, and a more premium service-business presentation.
-                  </p>
-                </div>
-                <div class="infoTile">
-                  <div class="infoTileBadge">Functionality Preserved</div>
-                  <p class="infoTileText">
-                    The contact form keeps the same field names, form ID, submit button ID, status element, and Formspree endpoint so the submission behavior stays the same.
-                  </p>
-                </div>
-              </aside>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="contactSection">
+      <section class="contactSection contactSectionSolo">
         <div class="container">
           <div class="contactGrid">
             <section class="card" aria-labelledby="contact-form-title">
@@ -850,7 +633,7 @@
                 <div class="sectionLabel">Contact Form</div>
                 <h2 class="cardTitle" id="contact-form-title">Send a message</h2>
                 <p class="cardText">
-                  Share what you need, your timeline, and anything helpful for the job. The form below keeps your current submission functionality while matching the latest Phoenix Theme 2 styling.
+                  Tell us what you need and we’ll get back to you as soon as possible.
                 </p>
 
                 <form id="contact-form" novalidate>
@@ -926,35 +709,6 @@
                   <div class="quickActions">
                     <a class="btn btnPrimary" href="tel:18633202101">Call Now</a>
                     <a class="btn btnGhost" href="../shop/">Browse Shop</a>
-                  </div>
-                </div>
-              </section>
-
-              <section class="card supportCard" aria-labelledby="support-overview-title">
-                <div class="cardBody">
-                  <div class="sectionLabel">Support Overview</div>
-                  <h2 class="cardTitle" id="support-overview-title" style="font-size:1.35rem;">What this page communicates better</h2>
-                  <p class="cardText">
-                    The revised layout gives customers faster context, stronger trust signals, and clearer action paths without changing the backend form behavior.
-                  </p>
-
-                  <div class="supportGrid">
-                    <div class="supportRow">
-                      <span>Visual style</span>
-                      <span>Phoenix Theme 2 aligned</span>
-                    </div>
-                    <div class="supportRow">
-                      <span>Form functionality</span>
-                      <span>Preserved</span>
-                    </div>
-                    <div class="supportRow">
-                      <span>Mobile responsiveness</span>
-                      <span>Improved</span>
-                    </div>
-                    <div class="supportRow">
-                      <span>CTA visibility</span>
-                      <span>Stronger</span>
-                    </div>
                   </div>
                 </div>
               </section>

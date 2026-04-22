@@ -276,30 +276,27 @@
       box-shadow: 0 18px 42px rgba(0,0,0,0.36), 0 0 0 8px rgba(167,139,250,0.05);
     }
 
-    .heroKicker {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 8px 12px;
-      border-radius: 999px;
-      background: rgba(167, 139, 250, 0.08);
-      border: 1px solid rgba(167, 139, 250, 0.16);
-      color: var(--accent);
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      font-size: 0.74rem;
-      font-weight: 800;
-    }
-
-    .heroKickerDot {
-      width: 8px;
-      height: 8px;
-      border-radius: 999px;
-      background: var(--accent);
-      box-shadow: 0 0 14px rgba(167, 139, 250, 0.95);
-    }
-
     .heroTitle {
+      margin: 10px auto 0;
+      max-width: 100%;
+      font-size: clamp(2.2rem, 5vw, 4.4rem);
+      line-height: 0.94;
+      letter-spacing: -0.06em;
+    }
+
+    .heroTitleTop {
+      display: block;
+      font-size: 0.62em;
+      letter-spacing: -0.03em;
+      margin-bottom: 8px;
+    }
+
+    .heroTitleMain {
+      display: block;
+      white-space: nowrap;
+    }
+
+    .heroText {
       margin: 18px auto 0;
       max-width: 12ch;
       font-size: clamp(2.7rem, 6vw, 5.2rem);
@@ -319,10 +316,8 @@
       display: flex;
       gap: 12px;
       justify-content: center;
-      flex-wrap: nowrap;
-      overflow-x: auto;
-      padding: 0 4px 6px;
-      scrollbar-width: thin;
+      flex-wrap: wrap;
+      padding: 0;
     }
 
     .offerChip {
@@ -358,52 +353,9 @@
       justify-content: center;
     }
 
-    .selectionBand {
-      padding: 0 0 28px;
-    }
-
-    .selectionGrid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 18px;
-    }
-
-    .selectionCard {
-      border: 1px solid var(--stroke);
-      border-radius: 22px;
-      background: linear-gradient(180deg, rgba(37, 38, 44, 0.95), rgba(32, 33, 38, 0.98));
-      box-shadow: var(--shadow-md);
-      padding: 22px;
-    }
-
-    .selectionLabel {
-      display: inline-flex;
-      padding: 6px 10px;
-      border-radius: 999px;
-      background: rgba(167, 139, 250, 0.08);
-      border: 1px solid rgba(167, 139, 250, 0.16);
-      color: var(--accent);
-      font-size: 0.72rem;
-      font-weight: 800;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      margin-bottom: 14px;
-    }
-
-    .selectionCard h3 {
-      margin: 0;
-      font-size: 1.2rem;
-      line-height: 1.08;
-      letter-spacing: -0.03em;
-    }
-
-    .selectionCard p {
-      margin: 10px 0 0;
-      color: var(--text-secondary);
-      font-size: 0.95rem;
-    }
-
     .section {
+      padding: 0 0 72px;
+    }
       padding: 0 0 72px;
     }
 
@@ -586,12 +538,7 @@
                 <img class="heroLogo" src="./assets/img/logo.png" alt="Phoenix Tech Solutions logo" />
               </div>
 
-              <div class="heroKicker">
-                <span class="heroKickerDot"></span>
-                <span>Reliable Tech Support</span>
-              </div>
-
-              <h1 class="heroTitle">WELCOME TO PHOENIX TECH SOLUTIONS</h1>
+              <h1 class="heroTitle"><span class="heroTitleTop">Welcome to</span><span class="heroTitleMain">PHOENIX TECH SOLUTIONS</span></h1>
 
               <div class="heroText">
                 Reliable tech support that comes to you.
@@ -615,26 +562,27 @@
         </div>
       </section>
 
-      <section class="selectionBand">
+      <section class="section">
         <div class="container">
-          <div class="selectionGrid">
-            <div class="selectionCard">
-              <div class="selectionLabel">At Your Door</div>
-              <h3>Mobile support for hardware and software issues.</h3>
-              <p>On-site help for repairs, troubleshooting, upgrades, and setup without the typical big-box experience.</p>
+          <div class="cta">
+            <div>
+              <h3>Interested in new software? Check out our shop.</h3>
+              <div class="small" style="margin-top:6px;">
+                Browse our Phoenix products — more releases and checkout options coming soon.
+              </div>
             </div>
+            <div style="display:flex; gap:10px; flex-wrap:wrap;">
+              <a class="btn btnGhost" href="./services/">Services</a>
+              <a class="btn btnPrimary" href="./shop/">Shop</a>
+            </div>
+          </div>
+        </div>
+      </section>
 
-            <div class="selectionCard">
-              <div class="selectionLabel">Remote Help</div>
-              <h3>Virtual support when you need fast assistance.</h3>
-              <p>Get guided help remotely for software issues, cleanup, installs, and system fixes from anywhere.</p>
-            </div>
-
-            <div class="selectionCard">
-              <div class="selectionLabel">Phoenix Standard</div>
-              <h3>Clean design, clear options, and a more premium landing experience.</h3>
-              <p>The new theme elements are applied here without replacing the landing page structure you originally built.</p>
-            </div>
+      <section class="section" style="padding-top:0; padding-bottom:72px;">
+        <div class="container">
+          <div class="cta" style="min-height: 120px; justify-content:center; background: linear-gradient(180deg, rgba(37, 38, 44, 0.82), rgba(32, 33, 38, 0.9));">
+            <div class="small" style="text-align:center; max-width:46ch;">Additional featured content can go here later.</div>
           </div>
         </div>
       </section>

@@ -150,14 +150,6 @@
       color: var(--text-primary);
     }
 
-    .brandSub {
-      margin-top: 4px;
-      font-size: 0.72rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-    }
-
     .nav {
       display: flex;
       align-items: center;
@@ -237,17 +229,13 @@
     }
 
     .contactSection {
-      padding: 64px 0 78px;
+      padding: 36px 0 78px;
     }
 
     .contactSectionSolo {
       min-height: calc(100vh - 220px);
       display: flex;
       align-items: center;
-    }
-
-    .contactSection {
-      padding: 18px 0 78px;
     }
 
     .contactGrid {
@@ -369,6 +357,7 @@
 
     #form-status {
       display: none;
+      margin-top: 28px;
       padding: 14px 16px;
       border-radius: 14px;
       font-size: 0.95rem;
@@ -480,18 +469,12 @@
       border-top: 1px solid var(--stroke);
       background: rgba(23, 24, 28, 0.94);
     }
-      position: relative;
-      z-index: 1;
-      margin-top: 10px;
-      padding: 34px 0 46px;
-      border-top: 1px solid var(--stroke);
-      background: rgba(23, 24, 28, 0.94);
-    }
 
     .footerGrid {
       display: grid;
       grid-template-columns: 1.8fr 1fr 1fr;
       gap: 28px;
+      align-items: start;
     }
 
     .footerTitle {
@@ -543,16 +526,10 @@
         justify-content: center;
       }
 
-      .hero {
-        padding-top: 34px;
-      }
-
-      .heroCard,
       .cardBody {
         padding: 22px;
       }
 
-      .heroHighlights,
       .formGrid,
       .footerGrid {
         grid-template-columns: 1fr;
@@ -569,7 +546,6 @@
       }
 
       .topBar,
-      .supportRow,
       .detailItem {
         align-items: flex-start;
       }
@@ -587,10 +563,6 @@
       .nav a {
         padding: 9px 12px;
         font-size: 0.88rem;
-      }
-
-      h1 {
-        font-size: clamp(2rem, 12vw, 2.7rem);
       }
     }
   </style>
